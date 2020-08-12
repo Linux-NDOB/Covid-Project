@@ -80,17 +80,72 @@ public class Covid {
             int casosPositivos;
 
             int noPruebas;
+             
+
+            
+            int dias;
+
+            dias = Integer.parseInt(JOptionPane.showInputDialog(null, "Cuantos dias se trabajaron"));
+
+            for(int j = 0; j<dias; j++){
+        
+                JOptionPane.showMessageDialog(null, "ingrese los datos para el dia " + j+1);
+            
+            
+            
+          
+
+           
+            noPruebas = Integer.parseInt(JOptionPane.showInputDialog(
+                        null, "¿Cuantas pruebas fueron realizadas en el dia" + j+1));
+
 
             casosPositivos = Integer.parseInt(JOptionPane.showInputDialog(
-                null, "¿Cuantos casos fueron positivos?"));
+                            null, "¿Cuantos casos fueron positivos?"));
 
-            noPruebas = Integer.parseInt(JOptionPane.showInputDialog(
-                        null, "¿Cuantas pruebas fueron realizadas ese día?"));
+                            if(casosPositivos>noPruebas){
 
-                        String comuna;
-                    //Referenciado de valor de edad
-                    int años;
+                                JOptionPane.showMessageDialog(null, "numero de pruebas no pude ser inferior " + "\n" 
+                                                            + "a nro de casos positivos");
+
+                            break;
+                            }
+
+                            else{
+
+                                 JOptionPane.showMessageDialog(null, "Puede continuar");
+
+                            }
+
       
+
+            
+                           
+                    
+                    String comuna;
+
+                    //contador de resultados
+                    int cP = 0;
+                    int cN = 0;
+
+
+
+
+                    //Referenciado de valor de edad
+                    
+
+                    int cCatorce = 0;
+                    int qTreinta = 0;
+                    int tSesenta = 0;
+                    int sCien = 0;
+
+
+      
+                    //Contador de comorbilidad
+                    int d = 0;
+                    int h = 0;
+                    int o = 0;
+                    int n = 0;
 
                     //Contadores de Sintomas
                         int cSi1 = 0;
@@ -196,11 +251,11 @@ public class Covid {
    
                                Object xSintomas = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
                                        "Seleccion de Sintomas",
-                                       JOptionPane.QUESTION_MESSAGE,null,tSexo ,tSexo[0]);
+                                       JOptionPane.QUESTION_MESSAGE,null,tSintomas ,tSintomas[0]);
    
                                sintomas = mostrar.toString();
 
-                               if(sintomas.equals("A")){
+                               if(sintomas.equals("S")){
 
                                 cSi1 ++;
    
@@ -213,19 +268,100 @@ public class Covid {
 
                                edad = Integer.parseInt(JOptionPane.showInputDialog(null,
                                       "Prorfavor ingrese la edad"));
-                               años = edad;
+                               if(edad <= 14)
+                               cCatorce ++;
+
+                               else if(edad >14 && edad <= 30)
+                               qTreinta ++;
+
+                               else if(edad >30 && edad <60)
+                               tSesenta ++;
+
+                               else if(edad > 60 && edad <=100)
+                               sCien ++;
 
 
 
-           
-   
-        }
+        } 
 
+
+        Object tResultado[] = new Object[]{"Positivo","Negativo" };
+
+        Object xResultado = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
+        "Seleccion de Sintomas",
+        JOptionPane.QUESTION_MESSAGE,null,tResultado ,tResultado[0]);
+
+        resultado = xResultado.toString();
+
+        if(resultado.equals("Positivo"))
+        cP++;
+
+        else if(resultado.equals("Negativo"))
+        cN++;
+
+
+        Object tComorbilidad[] = new Object[]{"Diabetes","Hipertension" , "Obesidad", "ninguna"};
+
+        Object xComorbilidad = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
+        "Seleccion de Sintomas",
+        JOptionPane.QUESTION_MESSAGE,null,tComorbilidad ,tComorbilidad[0]);
+
+        comorbilidad = xComorbilidad.toString();
+
+        if(resultado.equals("Positivo") && comorbilidad.equals("Diabetes"))
+        d++;
+
+        else if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion"))
+        h++;
+
+        if(resultado.equals("Positivo") && comorbilidad.equals("Obesidad"))
+        o++;
+
+        else if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
+        n++;
+
+
+
+        
         JOptionPane.showMessageDialog(null, "numero de pruebas " + noPruebas +"\n"
-                                    + "casos positivos " + casosPositivos +"\n"
-                                    + " de la comuna1 " + cC1);
+        + "casos positivos " + cP +"\n"
+        + " de la comuna1 " + cC1 
+        + "\n"
+        + " de la comuna2 " + cC2
+        + "\n"
+        + " de la comuna3 " + cC3
+        + "\n"
+        + " de la comuna4 " + cC4
+        + "\n"
+        + " de la comuna5 " + cC5
+        + "\n"
+        + " de la comuna6 " + cC6
+        + "\n"
+        + " de la comuna7 " + cC7
+        + "\n"
+        + " de la comuna8 " + cC8
+        + "\n"
+        + " de la comuna9 " + cC9
+        + "\n"
+        + "cantidad de Hombres : " + cS1
+        + "\n"
+        + "cantidad de mujeres :  " + cS2
+        + "\n"
+        + "cantidad sintomaticos  " + cSi1
+        + "\n"
+        + "cantidad asintomaticos  " + cS2
+        + "\n"
+        + "de 0-14 : " + cCatorce
+        + "\n"
+        + "de 15-30  " + qTreinta
+        + "\n"
+        + "de 30-60 : " + tSesenta
+        + "\n"
+        + "de 60-100  " + sCien);
 
     }
+}
+
 }
 
     
