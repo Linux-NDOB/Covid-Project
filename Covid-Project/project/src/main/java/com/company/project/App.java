@@ -112,16 +112,22 @@ public  class App {
     obj.puntoTres();
 
     break;
-    
+
     case 4:
+
+    obj.puntCuatro();
     
     break;
     
     case 5:
+
+    obj.puntCinco();
     
     break;
     
     case 6:
+
+    obj.puntSeis();
    
     break;
 

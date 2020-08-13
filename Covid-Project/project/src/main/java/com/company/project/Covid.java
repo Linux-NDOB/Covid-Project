@@ -3,6 +3,15 @@ package com.company.project;
 import javax.swing.JOptionPane;
 
 public class Covid {
+
+        //casos asintomaticos y sintomaicos
+        private int cSintomaticos;
+        
+        private int cAsintomaticos;
+
+        //numero de casos positivos totales de la semana
+
+        private int cPositivos;
         
         //contador casos positivos por  comunas 
 
@@ -62,6 +71,9 @@ public class Covid {
         private String comorbilidad;
 
         public Covid() {
+            this.cAsintomaticos = 0;
+            this.cSintomaticos = 0;
+            this.cPositivos = 0;
             this.comuna1 = 0;
             this.comuna2 = 0;
             this.comuna3 = 0;
@@ -90,6 +102,31 @@ public class Covid {
             this.ninguna = 0;
 
         }
+
+        public int getcSintomaticos() {
+            return cSintomaticos;
+        }
+        
+        public void setcSintomaticos(int cSintomaticos) {
+            this.cSintomaticos = cSintomaticos;
+        }
+        
+        public int getcAsintomaticos() {
+            return cAsintomaticos;
+        }
+        
+        public void setcAsintomaticos(int cAsintomaticos) {
+            this.cAsintomaticos = cAsintomaticos;
+        }
+
+        public int getcPositivos() {
+            return cPositivos;
+        }
+        
+        public void setcPositivos(int cPositivos) {
+            this.cPositivos = cPositivos;
+        }
+        
 
         public int getComuna() {
             return comuna;
@@ -432,11 +469,11 @@ for (int i= 0; i < noPruebas; i++){
 
                if(sintomas.equals("S")){
 
-                cSi1 ++;
+                cSintomaticos ++;
 
                }else if(sintomas.equals("A")){
 
-                cSi2 ++;
+                cAsintomaticos ++;
 
                }
 
@@ -464,7 +501,7 @@ for (int i= 0; i < noPruebas; i++){
                resultado = xResultado.toString();
                
                if(resultado.equals("Positivo"))
-               cP++;
+               cPositivos++;
                
                else if(resultado.equals("Negativo"))
                cN++;
@@ -664,7 +701,7 @@ for (int i= 0; i < noPruebas; i++){
                        "Seleccion de Sexo",
                        JOptionPane.QUESTION_MESSAGE,null,tSexo ,tSexo[0]);
 
-               sexo = mostrar.toString();
+               sexo = xSexo.toString();
 
                if(sexo.equals("M")){
 
@@ -682,15 +719,16 @@ for (int i= 0; i < noPruebas; i++){
                        "Seleccion de Sintomas",
                        JOptionPane.QUESTION_MESSAGE,null,tSintomas ,tSintomas[0]);
 
-               sintomas = mostrar.toString();
+               sintomas = xSintomas.toString();
 
+               
                if(sintomas.equals("S")){
 
-                cSi1 ++;
+                cSintomaticos ++;
 
                }else if(sintomas.equals("A")){
 
-                cSi2 ++;
+                cAsintomaticos ++;
 
                }
 
@@ -711,14 +749,14 @@ for (int i= 0; i < noPruebas; i++){
 
                Object tResultado[] = new Object[]{"Positivo","Negativo" };
 
-               Object xResultado = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
-               "Seleccion de Sintomas",
+               Object xResultado = JOptionPane.showInputDialog(null,"Elija su resultado  porfavor",
+               "Seleccion de resultados",
                JOptionPane.QUESTION_MESSAGE,null,tResultado ,tResultado[0]);
                
                resultado = xResultado.toString();
                
                if(resultado.equals("Positivo"))
-               cP++;
+               cPositivos++;
                
                else if(resultado.equals("Negativo"))
                cN++;
@@ -919,7 +957,7 @@ for (int i= 0; i < noPruebas; i++){
                        "Seleccion de Sexo",
                        JOptionPane.QUESTION_MESSAGE,null,tSexo ,tSexo[0]);
 
-               sexo = mostrar.toString();
+               sexo = xSexo.toString();
 
                if(sexo.equals("M")){
 
@@ -937,15 +975,16 @@ for (int i= 0; i < noPruebas; i++){
                        "Seleccion de Sintomas",
                        JOptionPane.QUESTION_MESSAGE,null,tSintomas ,tSintomas[0]);
 
-               sintomas = mostrar.toString();
+               sintomas = xSintomas.toString();
 
+               
                if(sintomas.equals("S")){
 
-                cSi1 ++;
+                cSintomaticos ++;
 
                }else if(sintomas.equals("A")){
 
-                cSi2 ++;
+                cAsintomaticos ++;
 
                }
 
@@ -966,14 +1005,14 @@ for (int i= 0; i < noPruebas; i++){
 
                Object tResultado[] = new Object[]{"Positivo","Negativo" };
 
-               Object xResultado = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
-               "Seleccion de Sintomas",
+               Object xResultado = JOptionPane.showInputDialog(null,"Elija su resultado  porfavor",
+               "Seleccion de resultados",
                JOptionPane.QUESTION_MESSAGE,null,tResultado ,tResultado[0]);
                
                resultado = xResultado.toString();
                
                if(resultado.equals("Positivo"))
-               cP++;
+               cPositivos++;
                
                else if(resultado.equals("Negativo"))
                cN++;
@@ -1127,7 +1166,7 @@ for (int i= 0; i < noPruebas; i++){
                        "Seleccion de Sexo",
                        JOptionPane.QUESTION_MESSAGE,null,tSexo ,tSexo[0]);
 
-               sexo = mostrar.toString();
+               sexo = xSexo.toString();
 
                if(sexo.equals("M")){
 
@@ -1145,15 +1184,16 @@ for (int i= 0; i < noPruebas; i++){
                        "Seleccion de Sintomas",
                        JOptionPane.QUESTION_MESSAGE,null,tSintomas ,tSintomas[0]);
 
-               sintomas = mostrar.toString();
+               sintomas = xSintomas.toString();
 
+               
                if(sintomas.equals("S")){
 
-                cSi1 ++;
+                cSintomaticos ++;
 
                }else if(sintomas.equals("A")){
 
-                cSi2 ++;
+                cAsintomaticos ++;
 
                }
 
@@ -1174,14 +1214,13 @@ for (int i= 0; i < noPruebas; i++){
 
                Object tResultado[] = new Object[]{"Positivo","Negativo" };
 
-               Object xResultado = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
-               "Seleccion de Sintomas",
+               Object xResultado = JOptionPane.showInputDialog(null,"Elija su resultado  porfavor",
+               "Seleccion de resultados",
                JOptionPane.QUESTION_MESSAGE,null,tResultado ,tResultado[0]);
-               
                resultado = xResultado.toString();
                
                if(resultado.equals("Positivo"))
-               cP++;
+               cPositivos++;
                
                else if(resultado.equals("Negativo"))
                cN++;
@@ -1380,7 +1419,7 @@ for (int i= 0; i < noPruebas; i++){
                        "Seleccion de Sexo",
                        JOptionPane.QUESTION_MESSAGE,null,tSexo ,tSexo[0]);
 
-               sexo = mostrar.toString();
+               sexo = xSexo.toString();
 
                if(sexo.equals("M")){
 
@@ -1398,15 +1437,16 @@ for (int i= 0; i < noPruebas; i++){
                        "Seleccion de Sintomas",
                        JOptionPane.QUESTION_MESSAGE,null,tSintomas ,tSintomas[0]);
 
-               sintomas = mostrar.toString();
+               sintomas = xSintomas.toString();
 
+              
                if(sintomas.equals("S")){
 
-                cSi1 ++;
+                cSintomaticos ++;
 
                }else if(sintomas.equals("A")){
 
-                cSi2 ++;
+                cAsintomaticos ++;
 
                }
 
@@ -1427,14 +1467,14 @@ for (int i= 0; i < noPruebas; i++){
 
                Object tResultado[] = new Object[]{"Positivo","Negativo" };
 
-               Object xResultado = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
-               "Seleccion de Sintomas",
+               Object xResultado = JOptionPane.showInputDialog(null,"Elija su resultado  porfavor",
+               "Seleccion de resultados",
                JOptionPane.QUESTION_MESSAGE,null,tResultado ,tResultado[0]);
                
                resultado = xResultado.toString();
                
                if(resultado.equals("Positivo"))
-               cP++;
+               cPositivos++;
                
                else if(resultado.equals("Negativo"))
                cN++;
@@ -1634,7 +1674,7 @@ for (int i= 0; i < noPruebas; i++){
                        "Seleccion de Sexo",
                        JOptionPane.QUESTION_MESSAGE,null,tSexo ,tSexo[0]);
 
-               sexo = mostrar.toString();
+               sexo = xSexo.toString();
 
                if(sexo.equals("M")){
 
@@ -1652,15 +1692,16 @@ for (int i= 0; i < noPruebas; i++){
                        "Seleccion de Sintomas",
                        JOptionPane.QUESTION_MESSAGE,null,tSintomas ,tSintomas[0]);
 
-               sintomas = mostrar.toString();
+               sintomas = xSintomas.toString();
 
+              
                if(sintomas.equals("S")){
 
-                cSi1 ++;
+                cSintomaticos ++;
 
                }else if(sintomas.equals("A")){
 
-                cSi2 ++;
+                cAsintomaticos ++;
 
                }
 
@@ -1681,14 +1722,14 @@ for (int i= 0; i < noPruebas; i++){
 
                Object tResultado[] = new Object[]{"Positivo","Negativo" };
 
-               Object xResultado = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
-               "Seleccion de Sintomas",
+               Object xResultado = JOptionPane.showInputDialog(null,"Elija su resultado  porfavor",
+               "Seleccion de resultados",
                JOptionPane.QUESTION_MESSAGE,null,tResultado ,tResultado[0]);
                
                resultado = xResultado.toString();
                
                if(resultado.equals("Positivo"))
-               cP++;
+               cPositivos++;
                
                else if(resultado.equals("Negativo"))
                cN++;
@@ -1888,7 +1929,7 @@ for (int i= 0; i < noPruebas; i++){
                        "Seleccion de Sexo",
                        JOptionPane.QUESTION_MESSAGE,null,tSexo ,tSexo[0]);
 
-               sexo = mostrar.toString();
+               sexo = xSexo.toString();
 
                if(sexo.equals("M")){
 
@@ -1908,13 +1949,14 @@ for (int i= 0; i < noPruebas; i++){
 
                sintomas = mostrar.toString();
 
+               
                if(sintomas.equals("S")){
 
-                cSi1 ++;
+                cSintomaticos ++;
 
                }else if(sintomas.equals("A")){
 
-                cSi2 ++;
+                cAsintomaticos ++;
 
                }
 
@@ -1935,14 +1977,14 @@ for (int i= 0; i < noPruebas; i++){
 
                Object tResultado[] = new Object[]{"Positivo","Negativo" };
 
-               Object xResultado = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
-               "Seleccion de Sintomas",
+               Object xResultado = JOptionPane.showInputDialog(null,"Elija su resultado  porfavor",
+               "Seleccion de resultados",
                JOptionPane.QUESTION_MESSAGE,null,tResultado ,tResultado[0]);
                
                resultado = xResultado.toString();
                
                if(resultado.equals("Positivo"))
-               cP++;
+               cPositivos++;
                
                else if(resultado.equals("Negativo"))
                cN++;
@@ -2061,6 +2103,45 @@ public void puntoTres(){
                                   "Casos positivos por comuna1" +comuna9 + "\n" );
 }
 
+public void puntCuatro(){
+
+    int nTotaldePruebas;
+    nTotaldePruebas = nPdia1+nPdia2+nPdia3+nPdia4+nPdia5+nPdia6+nPdia7;
+
+    JOptionPane.showMessageDialog(null, "Total de muestras tomadas: " + nTotaldePruebas + "\n"+ 
+                                  "Cantidad de casos positivos: " + cPositivos);
+
+
+}
+
+public void puntCinco(){
+
+    int nTotaldePruebas;
+    nTotaldePruebas = nPdia1+nPdia2+nPdia3+nPdia4+nPdia5+nPdia6+nPdia7;
+    JOptionPane.showMessageDialog(null,"Numero total de pruebas :" +nTotaldePruebas+ "\n"
+                                  +"porcentaje casos positivos comuna1 : " + ((comuna1*100)/nTotaldePruebas) +"%" +  "\n"
+                                  +"porcentaje casos positivos comuna2: " + ((comuna2*100)/nTotaldePruebas)+"%"+"\n"
+                                  +"porcentaje casos positivos comuna3 : " + ((comuna3*100)/nTotaldePruebas) +"%"
+                                  +"porcentaje casos positivos comuna4 : " + ((comuna4*100)/nTotaldePruebas) +"%" +  "\n"
+                                  +"porcentaje casos positivos comuna5: " + ((comuna5*100)/nTotaldePruebas)+"%"+"\n"
+                                  +"porcentaje casos positivos comuna6 : " + ((comuna6*100)/nTotaldePruebas) +"%"
+                                  +"porcentaje casos positivos comuna7 : " + ((comuna7*100)/nTotaldePruebas) +"%" +  "\n"
+                                  +"porcentaje casos positivos comuna8: " + ((comuna8*100)/nTotaldePruebas)+"%"+"\n"
+                                  +"porcentaje casos positivos comuna9 : " + ((comuna9*100)/nTotaldePruebas) +"%");
+
+
+}
+
+public void puntSeis(){
+
+    int nTotaldePruebas;
+    nTotaldePruebas = nPdia1+nPdia2+nPdia3+nPdia4+nPdia5+nPdia6+nPdia7;
+    JOptionPane.showMessageDialog(null,"Numero total de pruebas :" +nTotaldePruebas+ "\n"
+                                  +"porcentaje asintomaticos : " + ((cAsintomaticos*100)/nTotaldePruebas) +"%" +  "\n"
+                                  +"porcentaje sintomaticos: " + ((cSintomaticos*100)/nTotaldePruebas)+"%");
+
+
+}
 
 
 
