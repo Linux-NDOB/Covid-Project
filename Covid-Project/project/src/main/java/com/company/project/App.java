@@ -108,8 +108,11 @@ public  class App {
     break;
 
     case 3:
-  
+   
+    obj.puntoTres();
+
     break;
+    
     case 4:
     
     break;

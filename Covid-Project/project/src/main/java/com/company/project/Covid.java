@@ -4,6 +4,26 @@ import javax.swing.JOptionPane;
 
 public class Covid {
         
+        //contador casos positivos por  comunas 
+
+        private int comuna1;
+
+        private int comuna2;
+
+        private int comuna3;
+
+        private int comuna4;
+
+        private int comuna5;
+
+        private int comuna6;
+
+        private int comuna7;
+
+        private int comuna8;
+
+        private int comuna9;
+
 
         //comorbilidades   
         private int diabetes;
@@ -42,6 +62,15 @@ public class Covid {
         private String comorbilidad;
 
         public Covid() {
+            this.comuna1 = 0;
+            this.comuna2 = 0;
+            this.comuna3 = 0;
+            this.comuna4 = 0;
+            this.comuna5 = 0;
+            this.comuna6 = 0;
+            this.comuna7 = 0;
+            this.comuna8 = 0;
+            this.comuna9 = 0;
             this.nPdia1 = 0;
             this.nPdia2 = 0;
             this.nPdia3 = 0;
@@ -197,13 +226,79 @@ public class Covid {
         public void setNinguna(int ninguna) {
             this.ninguna = ninguna;
         }
-        
-        
-        
-        
 
-
-
+        public int getComuna1() {
+            return comuna1;
+        }
+        
+        public void setComuna1(int comuna1) {
+            this.comuna1 = comuna1;
+        }
+        
+        public int getComuna2() {
+            return comuna2;
+        }
+        
+        public void setComuna2(int comuna2) {
+            this.comuna2 = comuna2;
+        }
+        
+        public int getComuna3() {
+            return comuna3;
+        }
+        
+        public void setComuna3(int comuna3) {
+            this.comuna3 = comuna3;
+        }
+        
+        public int getComuna4() {
+            return comuna4;
+        }
+        
+        public void setComuna4(int comuna4) {
+            this.comuna4 = comuna4;
+        }
+        
+        public int getComuna5() {
+            return comuna5;
+        }
+        
+        public void setComuna5(int comuna5) {
+            this.comuna5 = comuna5;
+        }
+        
+        public int getComuna6() {
+            return comuna6;
+        }
+        
+        public void setComuna6(int comuna6) {
+            this.comuna6 = comuna6;
+        }
+        
+        public int getComuna7() {
+            return comuna7;
+        }
+        
+        public void setComuna7(int comuna7) {
+            this.comuna7 = comuna7;
+        }
+        public int getComuna8() {
+            return comuna8;
+        }
+        
+        public void setComuna8(int comuna8) {
+            this.comuna8 = comuna8;
+        }
+        
+        public int getComuna9() {
+            return comuna9;
+        }
+        
+        public void setComuna9(int comuna9) {
+            this.comuna9 = comuna9;
+        }
+        
+        
 public void Dia1(){
     int noPruebas;
 
@@ -307,14 +402,14 @@ for (int i= 0; i < noPruebas; i++){
 
                }
 
-
+              
                Object tSexo[] = new Object[]{"M","F"};
 
                Object xSexo = JOptionPane.showInputDialog(null,"Elija su sexo porfavor",
                        "Seleccion de Sexo",
                        JOptionPane.QUESTION_MESSAGE,null,tSexo ,tSexo[0]);
 
-               sexo = mostrar.toString();
+               sexo = xSexo.toString();
 
                if(sexo.equals("M")){
 
@@ -333,7 +428,7 @@ for (int i= 0; i < noPruebas; i++){
                        "Seleccion de Sintomas",
                        JOptionPane.QUESTION_MESSAGE,null,tSintomas ,tSintomas[0]);
 
-               sintomas = mostrar.toString();
+               sintomas = xSintomas.toString();
 
                if(sintomas.equals("S")){
 
@@ -397,9 +492,55 @@ for (int i= 0; i < noPruebas; i++){
                obesidad++;
                
                 }else 
-                    if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
+                    if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna")){
                n++;
                ninguna++;
+                }
+                if(comuna.equals("Comuna1") && resultado.equals("Positivo")){
+
+                    comuna1 ++;
+       
+                   }
+                    if(comuna.equals("Comuna2") && resultado.equals("Positivo")){
+       
+                       comuna2 ++;
+       
+                      }
+                       if(comuna.equals("Comuna3") && resultado.equals("Positivo")){
+       
+                       comuna3 ++;
+       
+                      }
+                      if(comuna.equals("Comuna4") && resultado.equals("Positivo")){
+       
+                       comuna4 ++;
+       
+                      }
+                      if(comuna.equals("Comuna5") && resultado.equals("Positivo")){
+       
+                       comuna5 ++;
+       
+                      }
+                      if(comuna.equals("Comuna6") && resultado.equals("Positivo")){
+       
+                       comuna6 ++;
+       
+                      }if(comuna.equals("Comuna7") && resultado.equals("Positivo")){
+       
+                       comuna7 ++;
+       
+                      }
+                      if(comuna.equals("Comuna8") && resultado.equals("Positivo")){
+       
+                       comuna8 ++;
+       
+                      }
+                      if(comuna.equals("Comuna9") && resultado.equals("Positivo")){
+       
+                       comuna9 ++;
+       
+                      }
+
 
                nPdia1 = noPruebas;
                
@@ -605,10 +746,55 @@ for (int i= 0; i < noPruebas; i++){
                 obesidad++;
                 
                  }else 
-                     if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna")){
                 n++;
                 ninguna++;
- 
+                     }
+                     if(comuna.equals("Comuna1") && resultado.equals("Positivo")){
+
+                        comuna1 ++;
+           
+                       }
+                        if(comuna.equals("Comuna2") && resultado.equals("Positivo")){
+           
+                           comuna2 ++;
+           
+                          }
+                           if(comuna.equals("Comuna3") && resultado.equals("Positivo")){
+           
+                           comuna3 ++;
+           
+                          }
+                          if(comuna.equals("Comuna4") && resultado.equals("Positivo")){
+           
+                           comuna4 ++;
+           
+                          }
+                          if(comuna.equals("Comuna5") && resultado.equals("Positivo")){
+           
+                           comuna5 ++;
+           
+                          }
+                          if(comuna.equals("Comuna6") && resultado.equals("Positivo")){
+           
+                           comuna6 ++;
+           
+                          }if(comuna.equals("Comuna7") && resultado.equals("Positivo")){
+           
+                           comuna7 ++;
+           
+                          }
+                          if(comuna.equals("Comuna8") && resultado.equals("Positivo")){
+           
+                           comuna8 ++;
+           
+                          }
+                          if(comuna.equals("Comuna9") && resultado.equals("Positivo")){
+           
+                           comuna9 ++;
+           
+                          }
+    
                 
 
                nPdia2 = noPruebas;
@@ -1023,9 +1209,55 @@ for (int i= 0; i < noPruebas; i++){
                 obesidad++;
                 
                  }else 
-                     if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna")){
                 n++;
                 ninguna++;
+                     }
+                     if(comuna.equals("Comuna1") && resultado.equals("Positivo")){
+
+                        comuna1 ++;
+           
+                       }
+                        if(comuna.equals("Comuna2") && resultado.equals("Positivo")){
+           
+                           comuna2 ++;
+           
+                          }
+                           if(comuna.equals("Comuna3") && resultado.equals("Positivo")){
+           
+                           comuna3 ++;
+           
+                          }
+                          if(comuna.equals("Comuna4") && resultado.equals("Positivo")){
+           
+                           comuna4 ++;
+           
+                          }
+                          if(comuna.equals("Comuna5") && resultado.equals("Positivo")){
+           
+                           comuna5 ++;
+           
+                          }
+                          if(comuna.equals("Comuna6") && resultado.equals("Positivo")){
+           
+                           comuna6 ++;
+           
+                          }if(comuna.equals("Comuna7") && resultado.equals("Positivo")){
+           
+                           comuna7 ++;
+           
+                          }
+                          if(comuna.equals("Comuna8") && resultado.equals("Positivo")){
+           
+                           comuna8 ++;
+           
+                          }
+                          if(comuna.equals("Comuna9") && resultado.equals("Positivo")){
+           
+                           comuna9 ++;
+           
+                          }
+    
                
                nPdia4 = noPruebas;
 
@@ -1230,9 +1462,55 @@ for (int i= 0; i < noPruebas; i++){
                 obesidad++;
                 
                  }else 
-                     if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna")){
                 n++;
                 ninguna++;
+                     }
+                     if(comuna.equals("Comuna1") && resultado.equals("Positivo")){
+
+                        comuna1 ++;
+           
+                       }
+                        if(comuna.equals("Comuna2") && resultado.equals("Positivo")){
+           
+                           comuna2 ++;
+           
+                          }
+                           if(comuna.equals("Comuna3") && resultado.equals("Positivo")){
+           
+                           comuna3 ++;
+           
+                          }
+                          if(comuna.equals("Comuna4") && resultado.equals("Positivo")){
+           
+                           comuna4 ++;
+           
+                          }
+                          if(comuna.equals("Comuna5") && resultado.equals("Positivo")){
+           
+                           comuna5 ++;
+           
+                          }
+                          if(comuna.equals("Comuna6") && resultado.equals("Positivo")){
+           
+                           comuna6 ++;
+           
+                          }if(comuna.equals("Comuna7") && resultado.equals("Positivo")){
+           
+                           comuna7 ++;
+           
+                          }
+                          if(comuna.equals("Comuna8") && resultado.equals("Positivo")){
+           
+                           comuna8 ++;
+           
+                          }
+                          if(comuna.equals("Comuna9") && resultado.equals("Positivo")){
+           
+                           comuna9 ++;
+           
+                          }
+    
 
                nPdia5 = noPruebas;
                
@@ -1438,9 +1716,55 @@ for (int i= 0; i < noPruebas; i++){
                 obesidad++;
                 
                  }else 
-                     if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna")){
                 n++;
                 ninguna++;
+                     }
+                     if(comuna.equals("Comuna1") && resultado.equals("Positivo")){
+
+                        comuna1 ++;
+           
+                       }
+                        if(comuna.equals("Comuna2") && resultado.equals("Positivo")){
+           
+                           comuna2 ++;
+           
+                          }
+                           if(comuna.equals("Comuna3") && resultado.equals("Positivo")){
+           
+                           comuna3 ++;
+           
+                          }
+                          if(comuna.equals("Comuna4") && resultado.equals("Positivo")){
+           
+                           comuna4 ++;
+           
+                          }
+                          if(comuna.equals("Comuna5") && resultado.equals("Positivo")){
+           
+                           comuna5 ++;
+           
+                          }
+                          if(comuna.equals("Comuna6") && resultado.equals("Positivo")){
+           
+                           comuna6 ++;
+           
+                          }if(comuna.equals("Comuna7") && resultado.equals("Positivo")){
+           
+                           comuna7 ++;
+           
+                          }
+                          if(comuna.equals("Comuna8") && resultado.equals("Positivo")){
+           
+                           comuna8 ++;
+           
+                          }
+                          if(comuna.equals("Comuna9") && resultado.equals("Positivo")){
+           
+                           comuna9 ++;
+           
+                          }
+    
 
                nPdia6 = noPruebas;
                
@@ -1646,9 +1970,55 @@ for (int i= 0; i < noPruebas; i++){
                 obesidad++;
                 
                  }else 
-                     if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna")){
                 n++;
                 ninguna++;
+                     }
+                     if(comuna.equals("Comuna1") && resultado.equals("Positivo")){
+
+                        comuna1 ++;
+           
+                       }
+                        if(comuna.equals("Comuna2") && resultado.equals("Positivo")){
+           
+                           comuna2 ++;
+           
+                          }
+                           if(comuna.equals("Comuna3") && resultado.equals("Positivo")){
+           
+                           comuna3 ++;
+           
+                          }
+                          if(comuna.equals("Comuna4") && resultado.equals("Positivo")){
+           
+                           comuna4 ++;
+           
+                          }
+                          if(comuna.equals("Comuna5") && resultado.equals("Positivo")){
+           
+                           comuna5 ++;
+           
+                          }
+                          if(comuna.equals("Comuna6") && resultado.equals("Positivo")){
+           
+                           comuna6 ++;
+           
+                          }if(comuna.equals("Comuna7") && resultado.equals("Positivo")){
+           
+                           comuna7 ++;
+           
+                          }
+                          if(comuna.equals("Comuna8") && resultado.equals("Positivo")){
+           
+                           comuna8 ++;
+           
+                          }
+                          if(comuna.equals("Comuna9") && resultado.equals("Positivo")){
+           
+                           comuna9 ++;
+           
+                          }
+    
 
                nPdia7 = noPruebas;
                
@@ -1673,6 +2043,27 @@ public void puntoDos(){
 
 
 }
+
+public void puntoTres(){
+
+    int nTotaldePruebas;
+    nTotaldePruebas = nPdia1+nPdia2+nPdia3+nPdia4+nPdia5+nPdia6+nPdia7;
+
+    JOptionPane.showMessageDialog(null, "Numero total de pruebas : " + nTotaldePruebas + "\n"+
+                                  "Casos positivos por comuna1" +comuna1 + "\n" + 
+                                  "Casos positivos por comuna1" +comuna2 + "\n" + 
+                                  "Casos positivos por comuna1" +comuna3 + "\n" + 
+                                  "Casos positivos por comuna1" +comuna4 + "\n" + 
+                                  "Casos positivos por comuna1" +comuna5 + "\n" + 
+                                  "Casos positivos por comuna1" +comuna6 + "\n" + 
+                                  "Casos positivos por comuna1" +comuna7 + "\n" + 
+                                  "Casos positivos por comuna1" +comuna8 + "\n" + 
+                                  "Casos positivos por comuna1" +comuna9 + "\n" );
+}
+
+
+
+
 }
 
 
