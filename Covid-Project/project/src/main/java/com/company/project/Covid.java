@@ -77,7 +77,7 @@ public class Covid {
          
         public void setDatos( ){
 
-            int casosPositivos;
+            
 
             int noPruebas;
              
@@ -99,28 +99,6 @@ public class Covid {
             noPruebas = Integer.parseInt(JOptionPane.showInputDialog(
                         null, "¿Cuantas pruebas fueron realizadas en el dia" + j+1));
 
-
-            casosPositivos = Integer.parseInt(JOptionPane.showInputDialog(
-                            null, "¿Cuantos casos fueron positivos?"));
-
-                            if(casosPositivos>noPruebas){
-
-                                JOptionPane.showMessageDialog(null, "numero de pruebas no pude ser inferior " + "\n" 
-                                                            + "a nro de casos positivos");
-
-                            break;
-                            }
-
-                            else{
-
-                                 JOptionPane.showMessageDialog(null, "Puede continuar");
-
-                            }
-
-      
-
-            
-                           
                     
                     String comuna;
 
@@ -323,8 +301,10 @@ public class Covid {
 
 
         
-        JOptionPane.showMessageDialog(null, "numero de pruebas " + noPruebas +"\n"
-        + "casos positivos " + cP +"\n"
+        JOptionPane.showMessageDialog(null,
+         "Total muestras tomadas en el día: " + noPruebas +
+         "\n"
+        + "casos positivos del día" +j + ":" + cP +"\n"
         + " de la comuna1 " + cC1 
         + "\n"
         + " de la comuna2 " + cC2
