@@ -1622,8 +1622,11 @@ public void puntoDos(){
 
     int nTotaldePruebas;
     nTotaldePruebas = nPdia1+nPdia2+nPdia3+nPdia4+nPdia5+nPdia6+nPdia7;
-    JOptionPane.showMessageDialog(null, "Numero total de pruebas :" +nTotaldePruebas+ "\n"
-                                  + "" + " " + "");
+    JOptionPane.showMessageDialog(null,"Numero total de pruebas :" +nTotaldePruebas+ "\n"
+                                  +"porcentaje casos positivos con diabetes : " + ((diabetes*100)/nTotaldePruebas) +"%" +  "\n"
+                                  +"porcentaje casos positivos con hipertension : " + ((hipertension*100)/nTotaldePruebas)+"%"+"\n"
+                                  +"porcentaje casos positivos con obesidad : " + ((diabetes*100)/nTotaldePruebas) +"%"+ "\n"
+                                  +"porcentaje casos positivos con ninguna : " + ((ninguna*100)/nTotaldePruebas)) + "%");
 }
 
 

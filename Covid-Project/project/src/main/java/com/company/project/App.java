@@ -106,6 +106,7 @@ public  class App {
    obj.puntoDos(); 
   
     break;
+
     case 3:
   
     break;
@@ -126,7 +127,7 @@ public  class App {
     break;
                
     case 8:
-    Exit=JOptionPane.showConfirmDialog(null, "¿Do you want to exit from the Menu?");
+    Exit=JOptionPane.showConfirmDialog(null, "¿esta seguro de que quiere sali?");
     if (Exit==0) {
        
      
@@ -134,7 +135,7 @@ public  class App {
                     }
     default:
                  
-    JOptionPane.showMessageDialog(null, "Non valid option ");
+    JOptionPane.showMessageDialog(null, "Opción inválida");
                      
     break;
                 }
