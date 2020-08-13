@@ -1626,7 +1626,7 @@ public void puntoDos(){
                                   +"porcentaje casos positivos con diabetes : " + ((diabetes*100)/nTotaldePruebas) +"%" +  "\n"
                                   +"porcentaje casos positivos con hipertension : " + ((hipertension*100)/nTotaldePruebas)+"%"+"\n"
                                   +"porcentaje casos positivos con obesidad : " + ((diabetes*100)/nTotaldePruebas) +"%"+ "\n"
-                                  +"porcentaje casos positivos con ninguna : " + ((ninguna*100)/nTotaldePruebas)) + "%");
+                                  +"porcentaje casos positivos con ninguna : " + ((ninguna*100)/nTotaldePruebas) + "%");
 }
 
 
