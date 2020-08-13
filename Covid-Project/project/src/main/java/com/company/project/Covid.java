@@ -340,21 +340,17 @@ public void Dia1(){
     int noPruebas;
 
     noPruebas = Integer.parseInt(JOptionPane.showInputDialog(
-        null, "¿Cuantas pruebas fueron realizadas en el dia" ));
+        null, "¿Cuantas pruebas fueron realizadas en el dia 1?" ));
 
-    
-    String comuna;
-    //contador de resultados
+    //contador de resultados P/N
     int cP = 0;
-    int cN = 0;
+
     //Referenciado de valor de edad
     
     int cCatorce = 0;
     int qTreinta = 0;
     int tSesenta = 0;
     int sCien = 0;
-
-
 
     //Contador de comorbilidad
     int d = 0;
@@ -383,6 +379,7 @@ public void Dia1(){
 
 for (int i= 0; i < noPruebas; i++){
 
+    String comuna;
 
             Object noComuna[] = new Object[]{"Comuna1","Comuna2","Comuna3","Comuna4",
             "Comuna5","Comuna6","Comuna7","Comuna8","Comuna9"
@@ -461,7 +458,7 @@ for (int i= 0; i < noPruebas; i++){
                Object tSintomas[] = new Object[]{"S","A"};
 
                Object xSintomas = JOptionPane.showInputDialog(null,
-                       "Elija si es asíntomativo o no",
+                       "Elija si es asintomatico o no",
                        "Seleccion de Sintomas",
                        JOptionPane.QUESTION_MESSAGE,null,tSintomas ,tSintomas[0]);
 
@@ -478,7 +475,7 @@ for (int i= 0; i < noPruebas; i++){
                }
 
                edad = Integer.parseInt(JOptionPane.showInputDialog(null,
-                      "Prorfavor ingrese la edad"));
+                      "Porfavor ingrese la edad"));
                if(edad <= 14)
                cCatorce ++;
 
@@ -491,7 +488,6 @@ for (int i= 0; i < noPruebas; i++){
                else if(edad > 60 && edad <=100)
                sCien ++;
 
-
                Object tResultado[] = new Object[]{"Positivo","Negativo" };
 
                Object xResultado = JOptionPane.showInputDialog(null,"Elija su resultado  porfavor",
@@ -500,17 +496,18 @@ for (int i= 0; i < noPruebas; i++){
                
                resultado = xResultado.toString();
                
-               if(resultado.equals("Positivo"))
+               if(resultado.equals("Positivo")){
+               cP++;
                cPositivos++;
                
-               else if(resultado.equals("Negativo"))
-               cN++;
+               }
                
+               Object tComorbilidad[] = new Object[]{
+                   "Diabetes","Hipertension" , "Obesidad", "Ninguna"};
                
-               Object tComorbilidad[] = new Object[]{"Diabetes","Hipertension" , "Obesidad", "ninguna"};
-               
-               Object xComorbilidad = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
-               "Seleccion de Sintomas",
+               Object xComorbilidad = JOptionPane.showInputDialog(null,
+               "Elija su Comobilidad ",
+               "Seleccion de Comorbilidad",
                JOptionPane.QUESTION_MESSAGE,null,tComorbilidad ,tComorbilidad[0]);
                
                comorbilidad = xComorbilidad.toString();
@@ -519,7 +516,7 @@ for (int i= 0; i < noPruebas; i++){
             
                diabetes++;
                }else   
-                    if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion")){
+                    if(resultado.equals("Positivo") && comorbilidad.equals("Hipertension")){
                h++;
                hipertension++;
                
@@ -585,9 +582,9 @@ for (int i= 0; i < noPruebas; i++){
 } 
 
 JOptionPane.showMessageDialog(null,
-"Total muestras tomadas en el día: " + noPruebas +
+"Total muestras tomadas en el día 1: " + noPruebas +
 "\n"
-+ "casos positivos del día:" + cP);
++ "casos positivos del día 1:" + cP);
 
 }
 
@@ -595,7 +592,7 @@ public void Dia2(){
     int noPruebas;
 
     noPruebas = Integer.parseInt(JOptionPane.showInputDialog(
-        null, "¿Cuantas pruebas fueron realizadas en el dia" ));
+        null, "¿Cuantas pruebas fueron realizadas en el dia 2?" ));
 
     
     String comuna;
@@ -774,7 +771,7 @@ for (int i= 0; i < noPruebas; i++){
             
                 diabetes++;
                 }else   
-                     if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion")){
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Hipertension")){
                 h++;
                 hipertension++;
                 
@@ -841,9 +838,9 @@ for (int i= 0; i < noPruebas; i++){
 } 
 
 JOptionPane.showMessageDialog(null,
-"Total muestras tomadas en el día: " + noPruebas +
+"Total muestras tomadas en el día 2: " + noPruebas +
 "\n"
-+ "casos positivos del día:" + cP);
++ "casos positivos del día 2:" + cP);
 
 }
 
@@ -851,7 +848,7 @@ public void Dia3(){
     int noPruebas;
 
     noPruebas = Integer.parseInt(JOptionPane.showInputDialog(
-        null, "¿Cuantas pruebas fueron realizadas en el dia" ));
+        null, "¿Cuantas pruebas fueron realizadas en el dia 3?" ));
 
     
     String comuna;
@@ -1014,14 +1011,10 @@ for (int i= 0; i < noPruebas; i++){
                if(resultado.equals("Positivo"))
                cPositivos++;
                
-               else if(resultado.equals("Negativo"))
-               cN++;
+               Object tComorbilidad[] = new Object[]{"Diabetes","Hipertension" , "Obesidad", "Ninguna"};
                
-               
-               Object tComorbilidad[] = new Object[]{"Diabetes","Hipertension" , "Obesidad", "ninguna"};
-               
-               Object xComorbilidad = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
-               "Seleccion de Sintomas",
+               Object xComorbilidad = JOptionPane.showInputDialog(null,"Elija su Comorbilidad",
+               "Seleccion de Comorbilidad",
                JOptionPane.QUESTION_MESSAGE,null,tComorbilidad ,tComorbilidad[0]);
                
                comorbilidad = xComorbilidad.toString();
@@ -1030,7 +1023,7 @@ for (int i= 0; i < noPruebas; i++){
             
                 diabetes++;
                 }else   
-                     if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion")){
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Hipertension")){
                 h++;
                 hipertension++;
                 
@@ -1050,9 +1043,9 @@ for (int i= 0; i < noPruebas; i++){
 } 
 
 JOptionPane.showMessageDialog(null,
-"Total muestras tomadas en el día: " + noPruebas +
+"Total muestras tomadas en el día 3: " + noPruebas +
 "\n"
-+ "casos positivos del día:" + cP);
++ "casos positivos del día 3:" + cP);
 
 }
 
@@ -1060,7 +1053,7 @@ public void Dia4(){
     int noPruebas;
 
     noPruebas = Integer.parseInt(JOptionPane.showInputDialog(
-        null, "¿Cuantas pruebas fueron realizadas en el dia" ));
+        null, "¿Cuantas pruebas fueron realizadas en el dia 4?" ));
 
     
     String comuna;
@@ -1228,8 +1221,8 @@ for (int i= 0; i < noPruebas; i++){
                
                Object tComorbilidad[] = new Object[]{"Diabetes","Hipertension" , "Obesidad", "ninguna"};
                
-               Object xComorbilidad = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
-               "Seleccion de Sintomas",
+               Object xComorbilidad = JOptionPane.showInputDialog(null,"Elija su Comorbilidad",
+               "Seleccion de Comorbilidad",
                JOptionPane.QUESTION_MESSAGE,null,tComorbilidad ,tComorbilidad[0]);
                
                comorbilidad = xComorbilidad.toString();
@@ -1238,7 +1231,7 @@ for (int i= 0; i < noPruebas; i++){
             
                 diabetes++;
                 }else   
-                     if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion")){
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Hipertension")){
                 h++;
                 hipertension++;
                 
@@ -1303,9 +1296,9 @@ for (int i= 0; i < noPruebas; i++){
 } 
 
 JOptionPane.showMessageDialog(null,
-"Total muestras tomadas en el día: " + noPruebas +
+"Total muestras tomadas en el día 4: " + noPruebas +
 "\n"
-+ "casos positivos del día:" + cP);
++ "casos positivos del día 4:" + cP);
 
 }
 
@@ -1313,7 +1306,7 @@ public void Dia5(){
     int noPruebas;
 
     noPruebas = Integer.parseInt(JOptionPane.showInputDialog(
-        null, "¿Cuantas pruebas fueron realizadas en el dia" ));
+        null, "¿Cuantas pruebas fueron realizadas en el dia 5?" ));
 
     
     String comuna;
@@ -1476,14 +1469,10 @@ for (int i= 0; i < noPruebas; i++){
                if(resultado.equals("Positivo"))
                cPositivos++;
                
-               else if(resultado.equals("Negativo"))
-               cN++;
-               
-               
                Object tComorbilidad[] = new Object[]{"Diabetes","Hipertension" , "Obesidad", "ninguna"};
                
-               Object xComorbilidad = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
-               "Seleccion de Sintomas",
+               Object xComorbilidad = JOptionPane.showInputDialog(null,"Elija su Comorbilidad",
+               "Seleccion de Comorbilidad",
                JOptionPane.QUESTION_MESSAGE,null,tComorbilidad ,tComorbilidad[0]);
                
                comorbilidad = xComorbilidad.toString();
@@ -1492,7 +1481,7 @@ for (int i= 0; i < noPruebas; i++){
             
                 diabetes++;
                 }else   
-                     if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion")){
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Hipertension")){
                 h++;
                 hipertension++;
                 
@@ -1558,9 +1547,9 @@ for (int i= 0; i < noPruebas; i++){
 } 
 
 JOptionPane.showMessageDialog(null,
-"Total muestras tomadas en el día: " + noPruebas +
+"Total muestras tomadas en el día 5: " + noPruebas +
 "\n"
-+ "casos positivos del día:" + cP);
++ "casos positivos del día 5:" + cP);
 
 }
 
@@ -1568,7 +1557,7 @@ public void Dia6(){
     int noPruebas;
 
     noPruebas = Integer.parseInt(JOptionPane.showInputDialog(
-        null, "¿Cuantas pruebas fueron realizadas en el dia" ));
+        null, "¿Cuantas pruebas fueron realizadas en el dia 5?" ));
 
     
     String comuna;
@@ -1731,14 +1720,10 @@ for (int i= 0; i < noPruebas; i++){
                if(resultado.equals("Positivo"))
                cPositivos++;
                
-               else if(resultado.equals("Negativo"))
-               cN++;
-               
-               
                Object tComorbilidad[] = new Object[]{"Diabetes","Hipertension" , "Obesidad", "ninguna"};
                
-               Object xComorbilidad = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
-               "Seleccion de Sintomas",
+               Object xComorbilidad = JOptionPane.showInputDialog(null,"Elija su Comorbilidad",
+               "Seleccion de Comorbilidad",
                JOptionPane.QUESTION_MESSAGE,null,tComorbilidad ,tComorbilidad[0]);
                
                comorbilidad = xComorbilidad.toString();
@@ -1747,7 +1732,7 @@ for (int i= 0; i < noPruebas; i++){
             
                 diabetes++;
                 }else   
-                     if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion")){
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Hipertension")){
                 h++;
                 hipertension++;
                 
@@ -1813,20 +1798,18 @@ for (int i= 0; i < noPruebas; i++){
 } 
 
 JOptionPane.showMessageDialog(null,
-"Total muestras tomadas en el día: " + noPruebas +
+"Total muestras tomadas en el día 6: " + noPruebas +
 "\n"
-+ "casos positivos del día:" + cP);
++ "casos positivos del día 6:" + cP);
 
 }
 
 public void Dia7(){
     int noPruebas;
 
-    noPruebas = Integer.parseInt(JOptionPane.showInputDialog(
-        null, "¿Cuantas pruebas fueron realizadas en el dia" ));
+    noPruebas = Integer.parseInt(JOptionPane.showInputDialog(null, 
+    "¿Cuantas pruebas fueron realizadas en el dia 7?" ));
 
-    
-    String comuna;
     //contador de resultados
     int cP = 0;
     int cN = 0;
@@ -1866,10 +1849,12 @@ public void Dia7(){
 
 for (int i= 0; i < noPruebas; i++){
 
+    String comuna;
+
 
             Object noComuna[] = new Object[]{"Comuna1","Comuna2","Comuna3","Comuna4",
-            "Comuna5","Comuna6","Comuna7","Comuna8","Comuna9"
-                    };
+                                            "Comuna5","Comuna6","Comuna7","Comuna8","Comuna9"
+                                            };
 
             Object mostrar = JOptionPane.showInputDialog(null,"Digite su Comuna porfavor",
                     "Seleccion de Comuna",
@@ -1961,7 +1946,7 @@ for (int i= 0; i < noPruebas; i++){
                }
 
                edad = Integer.parseInt(JOptionPane.showInputDialog(null,
-                      "Prorfavor ingrese la edad"));
+                                                                   "Prorfavor ingrese la edad"));
                if(edad <= 14)
                cCatorce ++;
 
@@ -1986,14 +1971,10 @@ for (int i= 0; i < noPruebas; i++){
                if(resultado.equals("Positivo"))
                cPositivos++;
                
-               else if(resultado.equals("Negativo"))
-               cN++;
+               Object tComorbilidad[] = new Object[]{"Diabetes" , "Hipertension" , "Obesidad", "Ninguna"};
                
-               
-               Object tComorbilidad[] = new Object[]{"Diabetes","Hipertension" , "Obesidad", "ninguna"};
-               
-               Object xComorbilidad = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
-               "Seleccion de Sintomas",
+               Object xComorbilidad = JOptionPane.showInputDialog(null,"Elija su Comorbilidad",
+               "Seleccion de Comorbilidad",
                JOptionPane.QUESTION_MESSAGE,null,tComorbilidad ,tComorbilidad[0]);
                
                comorbilidad = xComorbilidad.toString();
@@ -2002,7 +1983,7 @@ for (int i= 0; i < noPruebas; i++){
             
                 diabetes++;
                 }else   
-                     if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion")){
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Hipertension")){
                 h++;
                 hipertension++;
                 
@@ -2068,9 +2049,9 @@ for (int i= 0; i < noPruebas; i++){
 } 
 
 JOptionPane.showMessageDialog(null,
-"Total muestras tomadas en el día: " + noPruebas +
+"Total muestras tomadas en el día 7 : " + noPruebas +
 "\n"
-+ "casos positivos del día:" + cP);
++ "casos positivos del día 7 :" + cP);
 
 }
 
@@ -2079,9 +2060,9 @@ public void puntoDos(){
     int nTotaldePruebas;
     nTotaldePruebas = nPdia1+nPdia2+nPdia3+nPdia4+nPdia5+nPdia6+nPdia7;
     JOptionPane.showMessageDialog(null,"Numero total de pruebas :" +nTotaldePruebas+ "\n"
-                                  +"porcentaje casos positivos con diabetes : " + ((diabetes*100)/nTotaldePruebas) +"%" +  "\n"
-                                  +"porcentaje casos positivos con hipertension : " + ((hipertension*100)/nTotaldePruebas)+"%"+"\n"
-                                  +"porcentaje casos positivos con obesidad : " + ((diabetes*100)/nTotaldePruebas) +"%");
+                                  +"Porcentaje casos positivos con diabetes : " + ((diabetes*100)/nTotaldePruebas) +"%" +  "\n"
+                                  +"Prcentaje casos positivos con hipertension : " + ((hipertension*100)/nTotaldePruebas)+"%"+"\n"
+                                  +"Porcentaje casos positivos con obesidad : " + ((obesidad*100)/nTotaldePruebas) +"%");
 
 
 }
@@ -2092,15 +2073,15 @@ public void puntoTres(){
     nTotaldePruebas = nPdia1+nPdia2+nPdia3+nPdia4+nPdia5+nPdia6+nPdia7;
 
     JOptionPane.showMessageDialog(null, "Numero total de pruebas : " + nTotaldePruebas + "\n"+
-                                  "Casos positivos por comuna1" +comuna1 + "\n" + 
-                                  "Casos positivos por comuna1" +comuna2 + "\n" + 
-                                  "Casos positivos por comuna1" +comuna3 + "\n" + 
-                                  "Casos positivos por comuna1" +comuna4 + "\n" + 
-                                  "Casos positivos por comuna1" +comuna5 + "\n" + 
-                                  "Casos positivos por comuna1" +comuna6 + "\n" + 
-                                  "Casos positivos por comuna1" +comuna7 + "\n" + 
-                                  "Casos positivos por comuna1" +comuna8 + "\n" + 
-                                  "Casos positivos por comuna1" +comuna9 + "\n" );
+                                  "Casos positivos en comuna1 : " +comuna1 + "\n" + 
+                                  "Casos positivos en comuna2 : " +comuna2 + "\n" + 
+                                  "Casos positivos en comuna3 : " +comuna3 + "\n" + 
+                                  "Casos positivos en comuna4 : " +comuna4 + "\n" + 
+                                  "Casos positivos en comuna5 : " +comuna5 + "\n" + 
+                                  "Casos positivos en comuna6 : " +comuna6 + "\n" + 
+                                  "Casos positivos en comuna7 : " +comuna7 + "\n" + 
+                                  "Casos positivos en comuna8 : " +comuna8 + "\n" + 
+                                  "Casos positivos en comuna9 : " +comuna9 + "\n" );
 }
 
 public void puntCuatro(){
@@ -2109,7 +2090,7 @@ public void puntCuatro(){
     nTotaldePruebas = nPdia1+nPdia2+nPdia3+nPdia4+nPdia5+nPdia6+nPdia7;
 
     JOptionPane.showMessageDialog(null, "Total de muestras tomadas: " + nTotaldePruebas + "\n"+ 
-                                  "Cantidad de casos positivos: " + cPositivos);
+                                        "Cantidad de casos positivos: " + cPositivos);
 
 
 }
@@ -2121,10 +2102,10 @@ public void puntCinco(){
     JOptionPane.showMessageDialog(null,"Numero total de pruebas :" +nTotaldePruebas+ "\n"
                                   +"porcentaje casos positivos comuna1 : " + ((comuna1*100)/nTotaldePruebas) +"%" +  "\n"
                                   +"porcentaje casos positivos comuna2: " + ((comuna2*100)/nTotaldePruebas)+"%"+"\n"
-                                  +"porcentaje casos positivos comuna3 : " + ((comuna3*100)/nTotaldePruebas) +"%"
+                                  +"porcentaje casos positivos comuna3 : " + ((comuna3*100)/nTotaldePruebas) +"%"+"\n"
                                   +"porcentaje casos positivos comuna4 : " + ((comuna4*100)/nTotaldePruebas) +"%" +  "\n"
                                   +"porcentaje casos positivos comuna5: " + ((comuna5*100)/nTotaldePruebas)+"%"+"\n"
-                                  +"porcentaje casos positivos comuna6 : " + ((comuna6*100)/nTotaldePruebas) +"%"
+                                  +"porcentaje casos positivos comuna6 : " + ((comuna6*100)/nTotaldePruebas) +"%"+"\n"
                                   +"porcentaje casos positivos comuna7 : " + ((comuna7*100)/nTotaldePruebas) +"%" +  "\n"
                                   +"porcentaje casos positivos comuna8: " + ((comuna8*100)/nTotaldePruebas)+"%"+"\n"
                                   +"porcentaje casos positivos comuna9 : " + ((comuna9*100)/nTotaldePruebas) +"%");
