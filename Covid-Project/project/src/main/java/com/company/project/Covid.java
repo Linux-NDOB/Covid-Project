@@ -383,17 +383,23 @@ for (int i= 0; i < noPruebas; i++){
                
                comorbilidad = xComorbilidad.toString();
                
-               if(resultado.equals("Positivo") && comorbilidad.equals("Diabetes"))
-               d++;
-               
-               else if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion"))
+               if(resultado.equals("Positivo") && comorbilidad.equals("Diabetes")){
+            
+               diabetes++;
+               }else   
+                    if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion")){
                h++;
+               hipertension++;
                
-               if(resultado.equals("Positivo") && comorbilidad.equals("Obesidad"))
+               }else 
+                    if(resultado.equals("Positivo") && comorbilidad.equals("Obesidad")){
                o++;
+               obesidad++;
                
-               else if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
+                }else 
+                    if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
                n++;
+               ninguna++;
 
                nPdia1 = noPruebas;
                
@@ -579,23 +585,31 @@ for (int i= 0; i < noPruebas; i++){
                
                Object tComorbilidad[] = new Object[]{"Diabetes","Hipertension" , "Obesidad", "ninguna"};
                
-               Object xComorbilidad = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
-               "Seleccion de Sintomas",
+               Object xComorbilidad = JOptionPane.showInputDialog(null,"Elija sus Comorbilidad",
+               "Seleccion de Comorbilidad",
                JOptionPane.QUESTION_MESSAGE,null,tComorbilidad ,tComorbilidad[0]);
                
                comorbilidad = xComorbilidad.toString();
                
-               if(resultado.equals("Positivo") && comorbilidad.equals("Diabetes"))
-               d++;
-               
-               else if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion"))
-               h++;
-               
-               if(resultado.equals("Positivo") && comorbilidad.equals("Obesidad"))
-               o++;
-               
-               else if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
-               n++;
+               if(resultado.equals("Positivo") && comorbilidad.equals("Diabetes")){
+            
+                diabetes++;
+                }else   
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion")){
+                h++;
+                hipertension++;
+                
+                }else 
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Obesidad")){
+                o++;
+                obesidad++;
+                
+                 }else 
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
+                n++;
+                ninguna++;
+ 
+                
 
                nPdia2 = noPruebas;
                
@@ -787,17 +801,23 @@ for (int i= 0; i < noPruebas; i++){
                
                comorbilidad = xComorbilidad.toString();
                
-               if(resultado.equals("Positivo") && comorbilidad.equals("Diabetes"))
-               d++;
-               
-               else if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion"))
-               h++;
-               
-               if(resultado.equals("Positivo") && comorbilidad.equals("Obesidad"))
-               o++;
-               
-               else if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
-               n++;
+               if(resultado.equals("Positivo") && comorbilidad.equals("Diabetes")){
+            
+                diabetes++;
+                }else   
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion")){
+                h++;
+                hipertension++;
+                
+                }else 
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Obesidad")){
+                o++;
+                obesidad++;
+                
+                 }else 
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
+                n++;
+                ninguna++;
 
                nPdia3 = noPruebas;
                
@@ -989,17 +1009,23 @@ for (int i= 0; i < noPruebas; i++){
                
                comorbilidad = xComorbilidad.toString();
                
-               if(resultado.equals("Positivo") && comorbilidad.equals("Diabetes"))
-               d++;
-               
-               else if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion"))
-               h++;
-               
-               if(resultado.equals("Positivo") && comorbilidad.equals("Obesidad"))
-               o++;
-               
-               else if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
-               n++;
+               if(resultado.equals("Positivo") && comorbilidad.equals("Diabetes")){
+            
+                diabetes++;
+                }else   
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion")){
+                h++;
+                hipertension++;
+                
+                }else 
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Obesidad")){
+                o++;
+                obesidad++;
+                
+                 }else 
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
+                n++;
+                ninguna++;
                
                nPdia4 = noPruebas;
 
@@ -1190,17 +1216,23 @@ for (int i= 0; i < noPruebas; i++){
                
                comorbilidad = xComorbilidad.toString();
                
-               if(resultado.equals("Positivo") && comorbilidad.equals("Diabetes"))
-               d++;
-               
-               else if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion"))
-               h++;
-               
-               if(resultado.equals("Positivo") && comorbilidad.equals("Obesidad"))
-               o++;
-               
-               else if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
-               n++;
+               if(resultado.equals("Positivo") && comorbilidad.equals("Diabetes")){
+            
+                diabetes++;
+                }else   
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion")){
+                h++;
+                hipertension++;
+                
+                }else 
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Obesidad")){
+                o++;
+                obesidad++;
+                
+                 }else 
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
+                n++;
+                ninguna++;
 
                nPdia5 = noPruebas;
                
@@ -1392,17 +1424,23 @@ for (int i= 0; i < noPruebas; i++){
                
                comorbilidad = xComorbilidad.toString();
                
-               if(resultado.equals("Positivo") && comorbilidad.equals("Diabetes"))
-               d++;
-               
-               else if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion"))
-               h++;
-               
-               if(resultado.equals("Positivo") && comorbilidad.equals("Obesidad"))
-               o++;
-               
-               else if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
-               n++;
+               if(resultado.equals("Positivo") && comorbilidad.equals("Diabetes")){
+            
+                diabetes++;
+                }else   
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion")){
+                h++;
+                hipertension++;
+                
+                }else 
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Obesidad")){
+                o++;
+                obesidad++;
+                
+                 }else 
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
+                n++;
+                ninguna++;
 
                nPdia6 = noPruebas;
                
@@ -1594,17 +1632,23 @@ for (int i= 0; i < noPruebas; i++){
                
                comorbilidad = xComorbilidad.toString();
                
-               if(resultado.equals("Positivo") && comorbilidad.equals("Diabetes"))
-               d++;
-               
-               else if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion"))
-               h++;
-               
-               if(resultado.equals("Positivo") && comorbilidad.equals("Obesidad"))
-               o++;
-               
-               else if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
-               n++;
+               if(resultado.equals("Positivo") && comorbilidad.equals("Diabetes")){
+            
+                diabetes++;
+                }else   
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion")){
+                h++;
+                hipertension++;
+                
+                }else 
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Obesidad")){
+                o++;
+                obesidad++;
+                
+                 }else 
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
+                n++;
+                ninguna++;
 
                nPdia7 = noPruebas;
                
@@ -1625,11 +1669,10 @@ public void puntoDos(){
     JOptionPane.showMessageDialog(null,"Numero total de pruebas :" +nTotaldePruebas+ "\n"
                                   +"porcentaje casos positivos con diabetes : " + ((diabetes*100)/nTotaldePruebas) +"%" +  "\n"
                                   +"porcentaje casos positivos con hipertension : " + ((hipertension*100)/nTotaldePruebas)+"%"+"\n"
-                                  +"porcentaje casos positivos con obesidad : " + ((diabetes*100)/nTotaldePruebas) +"%"+ "\n"
-                                  +"porcentaje casos positivos con ninguna : " + ((ninguna*100)/nTotaldePruebas) + "%");
+                                  +"porcentaje casos positivos con obesidad : " + ((diabetes*100)/nTotaldePruebas) +"%");
+
+
 }
-
-
 }
 
 
