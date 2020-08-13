@@ -4,6 +4,19 @@ import javax.swing.JOptionPane;
 
 public class Covid {
 
+        //Contadores para las edades de hombres
+        private int edad1;
+        private int edad2;
+        private int edad3;
+        private int edad4;
+
+        //... para edades de mujeres
+
+        private int edad5;
+        private int edad6;
+        private int edad7;
+        private int edad8;
+
         //casos asintomaticos y sintomaicos
         private int cSintomaticos;
         
@@ -42,6 +55,7 @@ public class Covid {
         private int obesidad;
         
         private int ninguna;
+        
         //numero de pruebas por dia 
         private int nPdia1;
 
@@ -71,6 +85,14 @@ public class Covid {
         private String comorbilidad;
 
         public Covid() {
+            this.edad1 = 0;
+            this.edad2 = 0;
+            this.edad3 = 0;
+            this.edad4 = 0;
+            this.edad5 = 0;
+            this.edad6 = 0;
+            this.edad7 = 0;
+            this.edad8 = 0;
             this.cAsintomaticos = 0;
             this.cSintomaticos = 0;
             this.cPositivos = 0;
@@ -101,6 +123,70 @@ public class Covid {
             this.obesidad = 0;
             this.ninguna = 0;
 
+        }
+        
+        public int getEdad1() {
+            return edad1;
+        }
+        
+        public void setEdad1(int edad1) {
+            this.edad1 = edad1;
+        }
+        
+        public int getEdad2() {
+            return edad2;
+        }
+        
+        public void setEdad2(int edad2) {
+            this.edad2 = edad2;
+        }
+        
+        public int getEdad3() {
+            return edad3;
+        }
+        
+        public void setEdad3(int edad3) {
+            this.edad3 = edad3;
+        }
+        
+        public int getEdad4() {
+            return edad4;
+        }
+        
+        public void setEdad4(int edad4) {
+            this.edad4 = edad4;
+        }
+
+        public int getEdad5() {
+            return edad5;
+        }
+        
+        public void setEdad5(int edad5) {
+            this.edad5 = edad5;
+        }
+        
+        public int getEdad6() {
+            return edad6;
+        }
+        
+        public void setEdad6(int edad6) {
+            this.edad6 = edad6;
+        }
+        
+        public int getEdad7() {
+            return edad7;
+        }
+        
+        public void setEdad7(int edad7) {
+            this.edad7 = edad7;
+        }
+        
+        public int getEdad8() {
+            return edad8;
+        }
+        
+        public void setEdad8(int edad8) {
+            this.edad8 = edad8;
         }
 
         public int getcSintomaticos() {
@@ -575,6 +661,50 @@ for (int i= 0; i < noPruebas; i++){
        
                       }
 
+                      //condicionales para casos positivos
+                      //para grupo de edades y sexo
+
+                      //para hombres entre las edades descritas
+
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >0 && edad<= 14 ){
+
+                        edad1++;
+                      } else 
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >14 && edad<= 30 ){
+
+                        edad2++;
+
+                      }else
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >30 && edad<= 60 ){
+
+                        edad3++;
+                      }else 
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >60 && edad<= 100 ){
+
+                        edad4++;
+                      }
+
+                      //para mujeres entre las edades descritas
+
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >0 && edad<= 14 ){
+
+                        edad5++;
+                      } else 
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >14 && edad<= 30 ){
+
+                        edad6++;
+
+                      }else
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >30 && edad<= 60 ){
+
+                        edad7++;
+                      }else 
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >60 && edad<= 100 ){
+
+                        edad8++;
+                      }
+
+
 
                nPdia1 = noPruebas;
                
@@ -829,6 +959,50 @@ for (int i= 0; i < noPruebas; i++){
                            comuna9 ++;
            
                           }
+
+                          //condicionales para casos positivos
+                      //para grupo de edades y sexo
+
+                      //para hombres entre las edades descritas
+
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >0 && edad<= 14 ){
+
+                        edad1++;
+                      } else 
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >14 && edad<= 30 ){
+
+                        edad2++;
+
+                      }else
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >30 && edad<= 60 ){
+
+                        edad3++;
+                      }else 
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >60 && edad<= 100 ){
+
+                        edad4++;
+                      }
+
+                      //para mujeres entre las edades descritas
+
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >0 && edad<= 14 ){
+
+                        edad5++;
+                      } else 
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >14 && edad<= 30 ){
+
+                        edad6++;
+
+                      }else
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >30 && edad<= 60 ){
+
+                        edad7++;
+                      }else 
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >60 && edad<= 100 ){
+
+                        edad8++;
+                      }
+
     
                 
 
@@ -1033,9 +1207,99 @@ for (int i= 0; i < noPruebas; i++){
                 obesidad++;
                 
                  }else 
-                     if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
+                     if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna")){
                 n++;
                 ninguna++;
+                }
+
+                if(comuna.equals("Comuna1") && resultado.equals("Positivo")){
+
+                    comuna1 ++;
+       
+                   }
+                    if(comuna.equals("Comuna2") && resultado.equals("Positivo")){
+       
+                       comuna2 ++;
+       
+                      }
+                       if(comuna.equals("Comuna3") && resultado.equals("Positivo")){
+       
+                       comuna3 ++;
+       
+                      }
+                      if(comuna.equals("Comuna4") && resultado.equals("Positivo")){
+       
+                       comuna4 ++;
+       
+                      }
+                      if(comuna.equals("Comuna5") && resultado.equals("Positivo")){
+       
+                       comuna5 ++;
+       
+                      }
+                      if(comuna.equals("Comuna6") && resultado.equals("Positivo")){
+       
+                       comuna6 ++;
+       
+                      }if(comuna.equals("Comuna7") && resultado.equals("Positivo")){
+       
+                       comuna7 ++;
+       
+                      }
+                      if(comuna.equals("Comuna8") && resultado.equals("Positivo")){
+       
+                       comuna8 ++;
+       
+                      }
+                      if(comuna.equals("Comuna9") && resultado.equals("Positivo")){
+       
+                       comuna9 ++;
+       
+                      }
+
+                //condicionales para casos positivos
+                      //para grupo de edades y sexo
+
+                      //para hombres entre las edades descritas
+
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >0 && edad<= 14 ){
+
+                        edad1++;
+                      } else 
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >14 && edad<= 30 ){
+
+                        edad2++;
+
+                      }else
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >30 && edad<= 60 ){
+
+                        edad3++;
+                      }else 
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >60 && edad<= 100 ){
+
+                        edad4++;
+                      }
+
+                      //para mujeres entre las edades descritas
+
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >0 && edad<= 14 ){
+
+                        edad5++;
+                      } else 
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >14 && edad<= 30 ){
+
+                        edad6++;
+
+                      }else
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >30 && edad<= 60 ){
+
+                        edad7++;
+                      }else 
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >60 && edad<= 100 ){
+
+                        edad8++;
+                      }
+
 
                nPdia3 = noPruebas;
                
@@ -1289,6 +1553,50 @@ for (int i= 0; i < noPruebas; i++){
                            comuna9 ++;
            
                           }
+
+                          //condicionales para casos positivos
+                      //para grupo de edades y sexo
+
+                      //para hombres entre las edades descritas
+
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >0 && edad<= 14 ){
+
+                        edad1++;
+                      } else 
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >14 && edad<= 30 ){
+
+                        edad2++;
+
+                      }else
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >30 && edad<= 60 ){
+
+                        edad3++;
+                      }else 
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >60 && edad<= 100 ){
+
+                        edad4++;
+                      }
+
+                      //para mujeres entre las edades descritas
+
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >0 && edad<= 14 ){
+
+                        edad5++;
+                      } else 
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >14 && edad<= 30 ){
+
+                        edad6++;
+
+                      }else
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >30 && edad<= 60 ){
+
+                        edad7++;
+                      }else 
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >60 && edad<= 100 ){
+
+                        edad8++;
+                      }
+
     
                
                nPdia4 = noPruebas;
@@ -1539,6 +1847,50 @@ for (int i= 0; i < noPruebas; i++){
                            comuna9 ++;
            
                           }
+
+                          //condicionales para casos positivos
+                      //para grupo de edades y sexo
+
+                      //para hombres entre las edades descritas
+
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >0 && edad<= 14 ){
+
+                        edad1++;
+                      } else 
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >14 && edad<= 30 ){
+
+                        edad2++;
+
+                      }else
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >30 && edad<= 60 ){
+
+                        edad3++;
+                      }else 
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >60 && edad<= 100 ){
+
+                        edad4++;
+                      }
+
+                      //para mujeres entre las edades descritas
+
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >0 && edad<= 14 ){
+
+                        edad5++;
+                      } else 
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >14 && edad<= 30 ){
+
+                        edad6++;
+
+                      }else
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >30 && edad<= 60 ){
+
+                        edad7++;
+                      }else 
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >60 && edad<= 100 ){
+
+                        edad8++;
+                      }
+
     
 
                nPdia5 = noPruebas;
@@ -1790,6 +2142,50 @@ for (int i= 0; i < noPruebas; i++){
                            comuna9 ++;
            
                           }
+
+                          //condicionales para casos positivos
+                      //para grupo de edades y sexo
+
+                      //para hombres entre las edades descritas
+
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >0 && edad<= 14 ){
+
+                        edad1++;
+                      } else 
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >14 && edad<= 30 ){
+
+                        edad2++;
+
+                      }else
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >30 && edad<= 60 ){
+
+                        edad3++;
+                      }else 
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >60 && edad<= 100 ){
+
+                        edad4++;
+                      }
+
+                      //para mujeres entre las edades descritas
+
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >0 && edad<= 14 ){
+
+                        edad5++;
+                      } else 
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >14 && edad<= 30 ){
+
+                        edad6++;
+
+                      }else
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >30 && edad<= 60 ){
+
+                        edad7++;
+                      }else 
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >60 && edad<= 100 ){
+
+                        edad8++;
+                      }
+
     
 
                nPdia6 = noPruebas;
@@ -2041,6 +2437,50 @@ for (int i= 0; i < noPruebas; i++){
                            comuna9 ++;
            
                           }
+
+                          //condicionales para casos positivos
+                      //para grupo de edades y sexo
+
+                      //para hombres entre las edades descritas
+
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >0 && edad<= 14 ){
+
+                        edad1++;
+                      } else 
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >14 && edad<= 30 ){
+
+                        edad2++;
+
+                      }else
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >30 && edad<= 60 ){
+
+                        edad3++;
+                      }else 
+                      if(resultado.equals("Positivo") && sexo.equals("M") && edad >60 && edad<= 100 ){
+
+                        edad4++;
+                      }
+
+                      //para mujeres entre las edades descritas
+
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >0 && edad<= 14 ){
+
+                        edad5++;
+                      } else 
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >14 && edad<= 30 ){
+
+                        edad6++;
+
+                      }else
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >30 && edad<= 60 ){
+
+                        edad7++;
+                      }else 
+                      if(resultado.equals("Positivo") && sexo.equals("F") && edad >60 && edad<= 100 ){
+
+                        edad8++;
+                      }
+
     
 
                nPdia7 = noPruebas;
@@ -2124,7 +2564,23 @@ public void puntSeis(){
 
 }
 
+public void puntSiete(){
 
+
+JOptionPane.showMessageDialog(null,"De 0 a 14 años : " + "\n" + 
+                              "Mujeres :" +edad5+ "\n" +
+                              "Hombres :" + edad1+"\n" +
+                              "De 15 a 30 años : "+ "\n" +
+                              "Hombres : "+ edad2 + "\n"  +
+                              "Mujeres : "+ edad6+"\n" +
+                              "De 31 a 60 años : "+ "\n" +
+                              "Hombres : "+ edad3+"\n" +
+                              "Mujeres : "+ edad7+"\n" +
+                              "De 61 a 100 años"+ "\n" +
+                              "Hombres : "+ edad4+"\n" + 
+                              "Mujeres : " + edad8 );
+
+}
 
 }
 

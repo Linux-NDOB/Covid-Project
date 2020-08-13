@@ -132,6 +132,8 @@ public  class App {
     break;
 
     case 7:
+
+    obj.puntSiete();
    
     break;
                
