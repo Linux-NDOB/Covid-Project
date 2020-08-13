@@ -9,12 +9,9 @@ import javax.swing.plaf.ColorUIResource;
 public  class App {
     
     public static void main(String[] args) {
+
        Covid obj = new Covid();
    
-       obj.setDatos();
-    
-
-    
     int Option,Exit;
         
   
@@ -62,13 +59,40 @@ public  class App {
                 
     switch(Option){
     case 1:
-                    
-    
-        
-    
-                        
+    String seleccion;               
+    Object tDia[] = new Object[]{"Dia1","Dia2","Dia3","Dia4","Dia5","Dia6","Dia7",
+                                       };
    
-                   
+    Object xDia = JOptionPane.showInputDialog(null,"Elija el día en que se tomaron pruebas",
+                                       "Seleccion de día hábil",
+                JOptionPane.QUESTION_MESSAGE,null,tDia ,tDia[0]);
+   
+    seleccion = xDia.toString();
+        
+    if(seleccion.equals("Dia1")){
+
+        obj.Dia1();
+
+    }
+    if(seleccion.equals("Dia2")){
+        
+    }
+    if(seleccion.equals("Dia3")){
+        
+    }
+    if(seleccion.equals("Dia4")){
+        
+    }
+    if(seleccion.equals("Dia5")){
+        
+    }
+    if(seleccion.equals("Dia6")){
+        
+    }
+    if(seleccion.equals("Dia7")){
+        
+    }
+                  
     break;
     
     case 2:
@@ -107,12 +131,13 @@ public  class App {
     JOptionPane.showMessageDialog(null, "Non valid option ");
                      
     break;
+                }
      
     }while (Option != 8);
     
     
     System.exit(0);
 }         
-   
+} 
   
 
