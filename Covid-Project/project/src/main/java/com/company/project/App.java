@@ -103,7 +103,7 @@ public  class App {
     
     case 2:
    
-    
+   obj.puntoDos(); 
   
     break;
     case 3:
