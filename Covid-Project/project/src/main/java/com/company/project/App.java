@@ -75,22 +75,28 @@ public  class App {
 
     }
     if(seleccion.equals("Dia2")){
-        
+        obj.Dia2();
+
     }
     if(seleccion.equals("Dia3")){
-        
+        obj.Dia3();
+
     }
     if(seleccion.equals("Dia4")){
-        
+        obj.Dia4();
+
     }
     if(seleccion.equals("Dia5")){
-        
+        obj.Dia5();
+
     }
     if(seleccion.equals("Dia6")){
-        
+        obj.Dia6();
+
     }
     if(seleccion.equals("Dia7")){
-        
+        obj.Dia7();
+
     }
                   
     break;

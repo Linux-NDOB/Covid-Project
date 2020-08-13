@@ -540,6 +540,1206 @@ JOptionPane.showMessageDialog(null,
 
 }
 
+public void Dia2(){
+    int noPruebas;
+
+    noPruebas = Integer.parseInt(JOptionPane.showInputDialog(
+        null, "¿Cuantas pruebas fueron realizadas en el dia" ));
+
+    
+    String comuna;
+    //contador de resultados
+    int cP = 0;
+    int cN = 0;
+    //Referenciado de valor de edad
+    
+    int cCatorce = 0;
+    int qTreinta = 0;
+    int tSesenta = 0;
+    int sCien = 0;
+
+
+
+    //Contador de comorbilidad
+    int d = 0;
+    int h = 0;
+    int o = 0;
+    int n = 0;
+
+    //Contadores de Sintomas
+        int cSi1 = 0;
+        int cSi2 = 0;
+
+    //Contadores de Sexo
+        int cS1 = 0;
+        int cS2 = 0;
+
+    //Contadores de Comunas
+        int cC1 = 0;
+        int cC2 = 0;
+        int cC3 = 0;
+        int cC4 = 0;
+        int cC5 = 0;
+        int cC6 = 0;
+        int cC7 = 0;
+        int cC8 = 0;
+        int cC9 = 0;
+
+for (int i= 0; i < noPruebas; i++){
+
+
+            Object noComuna[] = new Object[]{"Comuna1","Comuna2","Comuna3","Comuna4",
+            "Comuna5","Comuna6","Comuna7","Comuna8","Comuna9"
+                    };
+
+            Object mostrar = JOptionPane.showInputDialog(null,"Digite su Comuna porfavor",
+                    "Seleccion de Comuna",
+                    JOptionPane.QUESTION_MESSAGE,null,noComuna ,noComuna[0]);
+
+            comuna = mostrar.toString();
+
+            if(comuna.equals("Comuna1")){
+
+             cC1 ++;
+
+            }
+             if(comuna.equals("Comuna2")){
+
+                cC2 ++;
+
+               }
+                if(comuna.equals("Comuna3")){
+
+                cC3 ++;
+
+               }
+               if(comuna.equals("Comuna4")){
+
+                cC4 ++;
+
+               }
+               if(comuna.equals("Comuna5")){
+
+                cC5 ++;
+
+               }
+               if(comuna.equals("Comuna6")){
+
+                cC6 ++;
+
+               }if(comuna.equals("Comuna7")){
+
+                cC7 ++;
+
+               }
+               if(comuna.equals("Comuna8")){
+
+                cC8 ++;
+
+               }
+               if(comuna.equals("Comuna9")){
+
+                cC9 ++;
+
+               }
+
+
+               Object tSexo[] = new Object[]{"M","F"};
+
+               Object xSexo = JOptionPane.showInputDialog(null,"Elija su sexo porfavor",
+                       "Seleccion de Sexo",
+                       JOptionPane.QUESTION_MESSAGE,null,tSexo ,tSexo[0]);
+
+               sexo = mostrar.toString();
+
+               if(sexo.equals("M")){
+
+                cS1 ++;
+
+               }else if(comuna.equals("F")){
+
+                cS2 ++;
+
+               }
+
+               Object tSintomas[] = new Object[]{"S","A"};
+
+               Object xSintomas = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
+                       "Seleccion de Sintomas",
+                       JOptionPane.QUESTION_MESSAGE,null,tSintomas ,tSintomas[0]);
+
+               sintomas = mostrar.toString();
+
+               if(sintomas.equals("S")){
+
+                cSi1 ++;
+
+               }else if(sintomas.equals("A")){
+
+                cSi2 ++;
+
+               }
+
+               edad = Integer.parseInt(JOptionPane.showInputDialog(null,
+                      "Prorfavor ingrese la edad"));
+               if(edad <= 14)
+               cCatorce ++;
+
+               else if(edad >14 && edad <= 30)
+               qTreinta ++;
+
+               else if(edad >30 && edad <60)
+               tSesenta ++;
+
+               else if(edad > 60 && edad <=100)
+               sCien ++;
+
+
+               Object tResultado[] = new Object[]{"Positivo","Negativo" };
+
+               Object xResultado = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
+               "Seleccion de Sintomas",
+               JOptionPane.QUESTION_MESSAGE,null,tResultado ,tResultado[0]);
+               
+               resultado = xResultado.toString();
+               
+               if(resultado.equals("Positivo"))
+               cP++;
+               
+               else if(resultado.equals("Negativo"))
+               cN++;
+               
+               
+               Object tComorbilidad[] = new Object[]{"Diabetes","Hipertension" , "Obesidad", "ninguna"};
+               
+               Object xComorbilidad = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
+               "Seleccion de Sintomas",
+               JOptionPane.QUESTION_MESSAGE,null,tComorbilidad ,tComorbilidad[0]);
+               
+               comorbilidad = xComorbilidad.toString();
+               
+               if(resultado.equals("Positivo") && comorbilidad.equals("Diabetes"))
+               d++;
+               
+               else if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion"))
+               h++;
+               
+               if(resultado.equals("Positivo") && comorbilidad.equals("Obesidad"))
+               o++;
+               
+               else if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
+               n++;
+               
+
+} 
+
+JOptionPane.showMessageDialog(null,
+"Total muestras tomadas en el día: " + noPruebas +
+"\n"
++ "casos positivos del día:" + cP);
+
+}
+
+public void Dia3(){
+    int noPruebas;
+
+    noPruebas = Integer.parseInt(JOptionPane.showInputDialog(
+        null, "¿Cuantas pruebas fueron realizadas en el dia" ));
+
+    
+    String comuna;
+    //contador de resultados
+    int cP = 0;
+    int cN = 0;
+    //Referenciado de valor de edad
+    
+    int cCatorce = 0;
+    int qTreinta = 0;
+    int tSesenta = 0;
+    int sCien = 0;
+
+
+
+    //Contador de comorbilidad
+    int d = 0;
+    int h = 0;
+    int o = 0;
+    int n = 0;
+
+    //Contadores de Sintomas
+        int cSi1 = 0;
+        int cSi2 = 0;
+
+    //Contadores de Sexo
+        int cS1 = 0;
+        int cS2 = 0;
+
+    //Contadores de Comunas
+        int cC1 = 0;
+        int cC2 = 0;
+        int cC3 = 0;
+        int cC4 = 0;
+        int cC5 = 0;
+        int cC6 = 0;
+        int cC7 = 0;
+        int cC8 = 0;
+        int cC9 = 0;
+
+for (int i= 0; i < noPruebas; i++){
+
+
+            Object noComuna[] = new Object[]{"Comuna1","Comuna2","Comuna3","Comuna4",
+            "Comuna5","Comuna6","Comuna7","Comuna8","Comuna9"
+                    };
+
+            Object mostrar = JOptionPane.showInputDialog(null,"Digite su Comuna porfavor",
+                    "Seleccion de Comuna",
+                    JOptionPane.QUESTION_MESSAGE,null,noComuna ,noComuna[0]);
+
+            comuna = mostrar.toString();
+
+            if(comuna.equals("Comuna1")){
+
+             cC1 ++;
+
+            }
+             if(comuna.equals("Comuna2")){
+
+                cC2 ++;
+
+               }
+                if(comuna.equals("Comuna3")){
+
+                cC3 ++;
+
+               }
+               if(comuna.equals("Comuna4")){
+
+                cC4 ++;
+
+               }
+               if(comuna.equals("Comuna5")){
+
+                cC5 ++;
+
+               }
+               if(comuna.equals("Comuna6")){
+
+                cC6 ++;
+
+               }if(comuna.equals("Comuna7")){
+
+                cC7 ++;
+
+               }
+               if(comuna.equals("Comuna8")){
+
+                cC8 ++;
+
+               }
+               if(comuna.equals("Comuna9")){
+
+                cC9 ++;
+
+               }
+
+
+               Object tSexo[] = new Object[]{"M","F"};
+
+               Object xSexo = JOptionPane.showInputDialog(null,"Elija su sexo porfavor",
+                       "Seleccion de Sexo",
+                       JOptionPane.QUESTION_MESSAGE,null,tSexo ,tSexo[0]);
+
+               sexo = mostrar.toString();
+
+               if(sexo.equals("M")){
+
+                cS1 ++;
+
+               }else if(comuna.equals("F")){
+
+                cS2 ++;
+
+               }
+
+               Object tSintomas[] = new Object[]{"S","A"};
+
+               Object xSintomas = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
+                       "Seleccion de Sintomas",
+                       JOptionPane.QUESTION_MESSAGE,null,tSintomas ,tSintomas[0]);
+
+               sintomas = mostrar.toString();
+
+               if(sintomas.equals("S")){
+
+                cSi1 ++;
+
+               }else if(sintomas.equals("A")){
+
+                cSi2 ++;
+
+               }
+
+               edad = Integer.parseInt(JOptionPane.showInputDialog(null,
+                      "Prorfavor ingrese la edad"));
+               if(edad <= 14)
+               cCatorce ++;
+
+               else if(edad >14 && edad <= 30)
+               qTreinta ++;
+
+               else if(edad >30 && edad <60)
+               tSesenta ++;
+
+               else if(edad > 60 && edad <=100)
+               sCien ++;
+
+
+               Object tResultado[] = new Object[]{"Positivo","Negativo" };
+
+               Object xResultado = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
+               "Seleccion de Sintomas",
+               JOptionPane.QUESTION_MESSAGE,null,tResultado ,tResultado[0]);
+               
+               resultado = xResultado.toString();
+               
+               if(resultado.equals("Positivo"))
+               cP++;
+               
+               else if(resultado.equals("Negativo"))
+               cN++;
+               
+               
+               Object tComorbilidad[] = new Object[]{"Diabetes","Hipertension" , "Obesidad", "ninguna"};
+               
+               Object xComorbilidad = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
+               "Seleccion de Sintomas",
+               JOptionPane.QUESTION_MESSAGE,null,tComorbilidad ,tComorbilidad[0]);
+               
+               comorbilidad = xComorbilidad.toString();
+               
+               if(resultado.equals("Positivo") && comorbilidad.equals("Diabetes"))
+               d++;
+               
+               else if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion"))
+               h++;
+               
+               if(resultado.equals("Positivo") && comorbilidad.equals("Obesidad"))
+               o++;
+               
+               else if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
+               n++;
+               
+
+} 
+
+JOptionPane.showMessageDialog(null,
+"Total muestras tomadas en el día: " + noPruebas +
+"\n"
++ "casos positivos del día:" + cP);
+
+}
+
+public void Dia4(){
+    int noPruebas;
+
+    noPruebas = Integer.parseInt(JOptionPane.showInputDialog(
+        null, "¿Cuantas pruebas fueron realizadas en el dia" ));
+
+    
+    String comuna;
+    //contador de resultados
+    int cP = 0;
+    int cN = 0;
+    //Referenciado de valor de edad
+    
+    int cCatorce = 0;
+    int qTreinta = 0;
+    int tSesenta = 0;
+    int sCien = 0;
+
+
+
+    //Contador de comorbilidad
+    int d = 0;
+    int h = 0;
+    int o = 0;
+    int n = 0;
+
+    //Contadores de Sintomas
+        int cSi1 = 0;
+        int cSi2 = 0;
+
+    //Contadores de Sexo
+        int cS1 = 0;
+        int cS2 = 0;
+
+    //Contadores de Comunas
+        int cC1 = 0;
+        int cC2 = 0;
+        int cC3 = 0;
+        int cC4 = 0;
+        int cC5 = 0;
+        int cC6 = 0;
+        int cC7 = 0;
+        int cC8 = 0;
+        int cC9 = 0;
+
+for (int i= 0; i < noPruebas; i++){
+
+
+            Object noComuna[] = new Object[]{"Comuna1","Comuna2","Comuna3","Comuna4",
+            "Comuna5","Comuna6","Comuna7","Comuna8","Comuna9"
+                    };
+
+            Object mostrar = JOptionPane.showInputDialog(null,"Digite su Comuna porfavor",
+                    "Seleccion de Comuna",
+                    JOptionPane.QUESTION_MESSAGE,null,noComuna ,noComuna[0]);
+
+            comuna = mostrar.toString();
+
+            if(comuna.equals("Comuna1")){
+
+             cC1 ++;
+
+            }
+             if(comuna.equals("Comuna2")){
+
+                cC2 ++;
+
+               }
+                if(comuna.equals("Comuna3")){
+
+                cC3 ++;
+
+               }
+               if(comuna.equals("Comuna4")){
+
+                cC4 ++;
+
+               }
+               if(comuna.equals("Comuna5")){
+
+                cC5 ++;
+
+               }
+               if(comuna.equals("Comuna6")){
+
+                cC6 ++;
+
+               }if(comuna.equals("Comuna7")){
+
+                cC7 ++;
+
+               }
+               if(comuna.equals("Comuna8")){
+
+                cC8 ++;
+
+               }
+               if(comuna.equals("Comuna9")){
+
+                cC9 ++;
+
+               }
+
+
+               Object tSexo[] = new Object[]{"M","F"};
+
+               Object xSexo = JOptionPane.showInputDialog(null,"Elija su sexo porfavor",
+                       "Seleccion de Sexo",
+                       JOptionPane.QUESTION_MESSAGE,null,tSexo ,tSexo[0]);
+
+               sexo = mostrar.toString();
+
+               if(sexo.equals("M")){
+
+                cS1 ++;
+
+               }else if(comuna.equals("F")){
+
+                cS2 ++;
+
+               }
+
+               Object tSintomas[] = new Object[]{"S","A"};
+
+               Object xSintomas = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
+                       "Seleccion de Sintomas",
+                       JOptionPane.QUESTION_MESSAGE,null,tSintomas ,tSintomas[0]);
+
+               sintomas = mostrar.toString();
+
+               if(sintomas.equals("S")){
+
+                cSi1 ++;
+
+               }else if(sintomas.equals("A")){
+
+                cSi2 ++;
+
+               }
+
+               edad = Integer.parseInt(JOptionPane.showInputDialog(null,
+                      "Prorfavor ingrese la edad"));
+               if(edad <= 14)
+               cCatorce ++;
+
+               else if(edad >14 && edad <= 30)
+               qTreinta ++;
+
+               else if(edad >30 && edad <60)
+               tSesenta ++;
+
+               else if(edad > 60 && edad <=100)
+               sCien ++;
+
+
+               Object tResultado[] = new Object[]{"Positivo","Negativo" };
+
+               Object xResultado = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
+               "Seleccion de Sintomas",
+               JOptionPane.QUESTION_MESSAGE,null,tResultado ,tResultado[0]);
+               
+               resultado = xResultado.toString();
+               
+               if(resultado.equals("Positivo"))
+               cP++;
+               
+               else if(resultado.equals("Negativo"))
+               cN++;
+               
+               
+               Object tComorbilidad[] = new Object[]{"Diabetes","Hipertension" , "Obesidad", "ninguna"};
+               
+               Object xComorbilidad = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
+               "Seleccion de Sintomas",
+               JOptionPane.QUESTION_MESSAGE,null,tComorbilidad ,tComorbilidad[0]);
+               
+               comorbilidad = xComorbilidad.toString();
+               
+               if(resultado.equals("Positivo") && comorbilidad.equals("Diabetes"))
+               d++;
+               
+               else if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion"))
+               h++;
+               
+               if(resultado.equals("Positivo") && comorbilidad.equals("Obesidad"))
+               o++;
+               
+               else if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
+               n++;
+               
+
+} 
+
+JOptionPane.showMessageDialog(null,
+"Total muestras tomadas en el día: " + noPruebas +
+"\n"
++ "casos positivos del día:" + cP);
+
+}
+
+public void Dia5(){
+    int noPruebas;
+
+    noPruebas = Integer.parseInt(JOptionPane.showInputDialog(
+        null, "¿Cuantas pruebas fueron realizadas en el dia" ));
+
+    
+    String comuna;
+    //contador de resultados
+    int cP = 0;
+    int cN = 0;
+    //Referenciado de valor de edad
+    
+    int cCatorce = 0;
+    int qTreinta = 0;
+    int tSesenta = 0;
+    int sCien = 0;
+
+
+
+    //Contador de comorbilidad
+    int d = 0;
+    int h = 0;
+    int o = 0;
+    int n = 0;
+
+    //Contadores de Sintomas
+        int cSi1 = 0;
+        int cSi2 = 0;
+
+    //Contadores de Sexo
+        int cS1 = 0;
+        int cS2 = 0;
+
+    //Contadores de Comunas
+        int cC1 = 0;
+        int cC2 = 0;
+        int cC3 = 0;
+        int cC4 = 0;
+        int cC5 = 0;
+        int cC6 = 0;
+        int cC7 = 0;
+        int cC8 = 0;
+        int cC9 = 0;
+
+for (int i= 0; i < noPruebas; i++){
+
+
+            Object noComuna[] = new Object[]{"Comuna1","Comuna2","Comuna3","Comuna4",
+            "Comuna5","Comuna6","Comuna7","Comuna8","Comuna9"
+                    };
+
+            Object mostrar = JOptionPane.showInputDialog(null,"Digite su Comuna porfavor",
+                    "Seleccion de Comuna",
+                    JOptionPane.QUESTION_MESSAGE,null,noComuna ,noComuna[0]);
+
+            comuna = mostrar.toString();
+
+            if(comuna.equals("Comuna1")){
+
+             cC1 ++;
+
+            }
+             if(comuna.equals("Comuna2")){
+
+                cC2 ++;
+
+               }
+                if(comuna.equals("Comuna3")){
+
+                cC3 ++;
+
+               }
+               if(comuna.equals("Comuna4")){
+
+                cC4 ++;
+
+               }
+               if(comuna.equals("Comuna5")){
+
+                cC5 ++;
+
+               }
+               if(comuna.equals("Comuna6")){
+
+                cC6 ++;
+
+               }if(comuna.equals("Comuna7")){
+
+                cC7 ++;
+
+               }
+               if(comuna.equals("Comuna8")){
+
+                cC8 ++;
+
+               }
+               if(comuna.equals("Comuna9")){
+
+                cC9 ++;
+
+               }
+
+
+               Object tSexo[] = new Object[]{"M","F"};
+
+               Object xSexo = JOptionPane.showInputDialog(null,"Elija su sexo porfavor",
+                       "Seleccion de Sexo",
+                       JOptionPane.QUESTION_MESSAGE,null,tSexo ,tSexo[0]);
+
+               sexo = mostrar.toString();
+
+               if(sexo.equals("M")){
+
+                cS1 ++;
+
+               }else if(comuna.equals("F")){
+
+                cS2 ++;
+
+               }
+
+               Object tSintomas[] = new Object[]{"S","A"};
+
+               Object xSintomas = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
+                       "Seleccion de Sintomas",
+                       JOptionPane.QUESTION_MESSAGE,null,tSintomas ,tSintomas[0]);
+
+               sintomas = mostrar.toString();
+
+               if(sintomas.equals("S")){
+
+                cSi1 ++;
+
+               }else if(sintomas.equals("A")){
+
+                cSi2 ++;
+
+               }
+
+               edad = Integer.parseInt(JOptionPane.showInputDialog(null,
+                      "Prorfavor ingrese la edad"));
+               if(edad <= 14)
+               cCatorce ++;
+
+               else if(edad >14 && edad <= 30)
+               qTreinta ++;
+
+               else if(edad >30 && edad <60)
+               tSesenta ++;
+
+               else if(edad > 60 && edad <=100)
+               sCien ++;
+
+
+               Object tResultado[] = new Object[]{"Positivo","Negativo" };
+
+               Object xResultado = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
+               "Seleccion de Sintomas",
+               JOptionPane.QUESTION_MESSAGE,null,tResultado ,tResultado[0]);
+               
+               resultado = xResultado.toString();
+               
+               if(resultado.equals("Positivo"))
+               cP++;
+               
+               else if(resultado.equals("Negativo"))
+               cN++;
+               
+               
+               Object tComorbilidad[] = new Object[]{"Diabetes","Hipertension" , "Obesidad", "ninguna"};
+               
+               Object xComorbilidad = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
+               "Seleccion de Sintomas",
+               JOptionPane.QUESTION_MESSAGE,null,tComorbilidad ,tComorbilidad[0]);
+               
+               comorbilidad = xComorbilidad.toString();
+               
+               if(resultado.equals("Positivo") && comorbilidad.equals("Diabetes"))
+               d++;
+               
+               else if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion"))
+               h++;
+               
+               if(resultado.equals("Positivo") && comorbilidad.equals("Obesidad"))
+               o++;
+               
+               else if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
+               n++;
+               
+
+} 
+
+JOptionPane.showMessageDialog(null,
+"Total muestras tomadas en el día: " + noPruebas +
+"\n"
++ "casos positivos del día:" + cP);
+
+}
+
+public void Dia6(){
+    int noPruebas;
+
+    noPruebas = Integer.parseInt(JOptionPane.showInputDialog(
+        null, "¿Cuantas pruebas fueron realizadas en el dia" ));
+
+    
+    String comuna;
+    //contador de resultados
+    int cP = 0;
+    int cN = 0;
+    //Referenciado de valor de edad
+    
+    int cCatorce = 0;
+    int qTreinta = 0;
+    int tSesenta = 0;
+    int sCien = 0;
+
+
+
+    //Contador de comorbilidad
+    int d = 0;
+    int h = 0;
+    int o = 0;
+    int n = 0;
+
+    //Contadores de Sintomas
+        int cSi1 = 0;
+        int cSi2 = 0;
+
+    //Contadores de Sexo
+        int cS1 = 0;
+        int cS2 = 0;
+
+    //Contadores de Comunas
+        int cC1 = 0;
+        int cC2 = 0;
+        int cC3 = 0;
+        int cC4 = 0;
+        int cC5 = 0;
+        int cC6 = 0;
+        int cC7 = 0;
+        int cC8 = 0;
+        int cC9 = 0;
+
+for (int i= 0; i < noPruebas; i++){
+
+
+            Object noComuna[] = new Object[]{"Comuna1","Comuna2","Comuna3","Comuna4",
+            "Comuna5","Comuna6","Comuna7","Comuna8","Comuna9"
+                    };
+
+            Object mostrar = JOptionPane.showInputDialog(null,"Digite su Comuna porfavor",
+                    "Seleccion de Comuna",
+                    JOptionPane.QUESTION_MESSAGE,null,noComuna ,noComuna[0]);
+
+            comuna = mostrar.toString();
+
+            if(comuna.equals("Comuna1")){
+
+             cC1 ++;
+
+            }
+             if(comuna.equals("Comuna2")){
+
+                cC2 ++;
+
+               }
+                if(comuna.equals("Comuna3")){
+
+                cC3 ++;
+
+               }
+               if(comuna.equals("Comuna4")){
+
+                cC4 ++;
+
+               }
+               if(comuna.equals("Comuna5")){
+
+                cC5 ++;
+
+               }
+               if(comuna.equals("Comuna6")){
+
+                cC6 ++;
+
+               }if(comuna.equals("Comuna7")){
+
+                cC7 ++;
+
+               }
+               if(comuna.equals("Comuna8")){
+
+                cC8 ++;
+
+               }
+               if(comuna.equals("Comuna9")){
+
+                cC9 ++;
+
+               }
+
+
+               Object tSexo[] = new Object[]{"M","F"};
+
+               Object xSexo = JOptionPane.showInputDialog(null,"Elija su sexo porfavor",
+                       "Seleccion de Sexo",
+                       JOptionPane.QUESTION_MESSAGE,null,tSexo ,tSexo[0]);
+
+               sexo = mostrar.toString();
+
+               if(sexo.equals("M")){
+
+                cS1 ++;
+
+               }else if(comuna.equals("F")){
+
+                cS2 ++;
+
+               }
+
+               Object tSintomas[] = new Object[]{"S","A"};
+
+               Object xSintomas = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
+                       "Seleccion de Sintomas",
+                       JOptionPane.QUESTION_MESSAGE,null,tSintomas ,tSintomas[0]);
+
+               sintomas = mostrar.toString();
+
+               if(sintomas.equals("S")){
+
+                cSi1 ++;
+
+               }else if(sintomas.equals("A")){
+
+                cSi2 ++;
+
+               }
+
+               edad = Integer.parseInt(JOptionPane.showInputDialog(null,
+                      "Prorfavor ingrese la edad"));
+               if(edad <= 14)
+               cCatorce ++;
+
+               else if(edad >14 && edad <= 30)
+               qTreinta ++;
+
+               else if(edad >30 && edad <60)
+               tSesenta ++;
+
+               else if(edad > 60 && edad <=100)
+               sCien ++;
+
+
+               Object tResultado[] = new Object[]{"Positivo","Negativo" };
+
+               Object xResultado = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
+               "Seleccion de Sintomas",
+               JOptionPane.QUESTION_MESSAGE,null,tResultado ,tResultado[0]);
+               
+               resultado = xResultado.toString();
+               
+               if(resultado.equals("Positivo"))
+               cP++;
+               
+               else if(resultado.equals("Negativo"))
+               cN++;
+               
+               
+               Object tComorbilidad[] = new Object[]{"Diabetes","Hipertension" , "Obesidad", "ninguna"};
+               
+               Object xComorbilidad = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
+               "Seleccion de Sintomas",
+               JOptionPane.QUESTION_MESSAGE,null,tComorbilidad ,tComorbilidad[0]);
+               
+               comorbilidad = xComorbilidad.toString();
+               
+               if(resultado.equals("Positivo") && comorbilidad.equals("Diabetes"))
+               d++;
+               
+               else if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion"))
+               h++;
+               
+               if(resultado.equals("Positivo") && comorbilidad.equals("Obesidad"))
+               o++;
+               
+               else if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
+               n++;
+               
+
+} 
+
+JOptionPane.showMessageDialog(null,
+"Total muestras tomadas en el día: " + noPruebas +
+"\n"
++ "casos positivos del día:" + cP);
+
+}
+
+public void Dia7(){
+    int noPruebas;
+
+    noPruebas = Integer.parseInt(JOptionPane.showInputDialog(
+        null, "¿Cuantas pruebas fueron realizadas en el dia" ));
+
+    
+    String comuna;
+    //contador de resultados
+    int cP = 0;
+    int cN = 0;
+    //Referenciado de valor de edad
+    
+    int cCatorce = 0;
+    int qTreinta = 0;
+    int tSesenta = 0;
+    int sCien = 0;
+
+
+
+    //Contador de comorbilidad
+    int d = 0;
+    int h = 0;
+    int o = 0;
+    int n = 0;
+
+    //Contadores de Sintomas
+        int cSi1 = 0;
+        int cSi2 = 0;
+
+    //Contadores de Sexo
+        int cS1 = 0;
+        int cS2 = 0;
+
+    //Contadores de Comunas
+        int cC1 = 0;
+        int cC2 = 0;
+        int cC3 = 0;
+        int cC4 = 0;
+        int cC5 = 0;
+        int cC6 = 0;
+        int cC7 = 0;
+        int cC8 = 0;
+        int cC9 = 0;
+
+for (int i= 0; i < noPruebas; i++){
+
+
+            Object noComuna[] = new Object[]{"Comuna1","Comuna2","Comuna3","Comuna4",
+            "Comuna5","Comuna6","Comuna7","Comuna8","Comuna9"
+                    };
+
+            Object mostrar = JOptionPane.showInputDialog(null,"Digite su Comuna porfavor",
+                    "Seleccion de Comuna",
+                    JOptionPane.QUESTION_MESSAGE,null,noComuna ,noComuna[0]);
+
+            comuna = mostrar.toString();
+
+            if(comuna.equals("Comuna1")){
+
+             cC1 ++;
+
+            }
+             if(comuna.equals("Comuna2")){
+
+                cC2 ++;
+
+               }
+                if(comuna.equals("Comuna3")){
+
+                cC3 ++;
+
+               }
+               if(comuna.equals("Comuna4")){
+
+                cC4 ++;
+
+               }
+               if(comuna.equals("Comuna5")){
+
+                cC5 ++;
+
+               }
+               if(comuna.equals("Comuna6")){
+
+                cC6 ++;
+
+               }if(comuna.equals("Comuna7")){
+
+                cC7 ++;
+
+               }
+               if(comuna.equals("Comuna8")){
+
+                cC8 ++;
+
+               }
+               if(comuna.equals("Comuna9")){
+
+                cC9 ++;
+
+               }
+
+
+               Object tSexo[] = new Object[]{"M","F"};
+
+               Object xSexo = JOptionPane.showInputDialog(null,"Elija su sexo porfavor",
+                       "Seleccion de Sexo",
+                       JOptionPane.QUESTION_MESSAGE,null,tSexo ,tSexo[0]);
+
+               sexo = mostrar.toString();
+
+               if(sexo.equals("M")){
+
+                cS1 ++;
+
+               }else if(comuna.equals("F")){
+
+                cS2 ++;
+
+               }
+
+               Object tSintomas[] = new Object[]{"S","A"};
+
+               Object xSintomas = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
+                       "Seleccion de Sintomas",
+                       JOptionPane.QUESTION_MESSAGE,null,tSintomas ,tSintomas[0]);
+
+               sintomas = mostrar.toString();
+
+               if(sintomas.equals("S")){
+
+                cSi1 ++;
+
+               }else if(sintomas.equals("A")){
+
+                cSi2 ++;
+
+               }
+
+               edad = Integer.parseInt(JOptionPane.showInputDialog(null,
+                      "Prorfavor ingrese la edad"));
+               if(edad <= 14)
+               cCatorce ++;
+
+               else if(edad >14 && edad <= 30)
+               qTreinta ++;
+
+               else if(edad >30 && edad <60)
+               tSesenta ++;
+
+               else if(edad > 60 && edad <=100)
+               sCien ++;
+
+
+               Object tResultado[] = new Object[]{"Positivo","Negativo" };
+
+               Object xResultado = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
+               "Seleccion de Sintomas",
+               JOptionPane.QUESTION_MESSAGE,null,tResultado ,tResultado[0]);
+               
+               resultado = xResultado.toString();
+               
+               if(resultado.equals("Positivo"))
+               cP++;
+               
+               else if(resultado.equals("Negativo"))
+               cN++;
+               
+               
+               Object tComorbilidad[] = new Object[]{"Diabetes","Hipertension" , "Obesidad", "ninguna"};
+               
+               Object xComorbilidad = JOptionPane.showInputDialog(null,"Elija sus Sintomas porfavor",
+               "Seleccion de Sintomas",
+               JOptionPane.QUESTION_MESSAGE,null,tComorbilidad ,tComorbilidad[0]);
+               
+               comorbilidad = xComorbilidad.toString();
+               
+               if(resultado.equals("Positivo") && comorbilidad.equals("Diabetes"))
+               d++;
+               
+               else if(resultado.equals("Positivo") && comorbilidad.equals("Hipertnesion"))
+               h++;
+               
+               if(resultado.equals("Positivo") && comorbilidad.equals("Obesidad"))
+               o++;
+               
+               else if(resultado.equals("Positivo") && comorbilidad.equals("Ninguna"))
+               n++;
+               
+
+} 
+
+JOptionPane.showMessageDialog(null,
+"Total muestras tomadas en el día: " + noPruebas +
+"\n"
++ "casos positivos del día:" + cP);
+
+}
+
 }
 
 
